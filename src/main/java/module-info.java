@@ -3,6 +3,6 @@ module com.st1.semesterprojekt1javafx {
     requires javafx.fxml;
 
 
-    opens com.st1.semesterprojekt1javafx to javafx.fxml;
-    exports com.st1.semesterprojekt1javafx;
+    opens com.st1 to javafx.fxml;
+    exports com.st1;
 }
