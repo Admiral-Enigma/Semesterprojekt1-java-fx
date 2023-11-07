@@ -18,7 +18,7 @@ public class StartController {
 
     @FXML
     protected void onHelloButtonClick() throws IOException {
-        welcomeText.setFont(new Font("Comic Sans MS", 27));
+        welcomeText.setFont(new Font("Comic Sans MS", 40));
         welcomeText.setText("Velkommen til Yurigistan Nuclear Bonanza!");
         boximage.setImage(new Image("https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds_mcfeast:1-3-product-tile-desktop?wid=829&hei=515&dpr=off"));
     }
