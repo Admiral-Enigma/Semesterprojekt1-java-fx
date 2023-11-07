@@ -1,11 +1,15 @@
-package com.st1;
+package com.st1.controllers;
 
+import com.st1.YurigistanApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Font;
 
-public class HelloController {
+import java.io.IOException;
+
+public class StartController {
     @FXML
     private Label welcomeText;
 
@@ -13,8 +17,9 @@ public class HelloController {
     private ImageView boximage;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Hvad en McFeast smager af?");
+    protected void onHelloButtonClick() throws IOException {
+        welcomeText.setFont(new Font("Comic Sans MS", 27));
+        welcomeText.setText("Velkommen til Yurigistan Nuclear Bonanza!");
         boximage.setImage(new Image("https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds_mcfeast:1-3-product-tile-desktop?wid=829&hei=515&dpr=off"));
     }
 }
