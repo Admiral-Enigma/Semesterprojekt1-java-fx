@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class YurgistanApplication extends Application {
+public class YurigistanApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(YurgistanApplication.class.getResource("start-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(YurigistanApplication.class.getResource("start-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
-        stage.setTitle("Yurgistan Game");
+        stage.setTitle("Yurigistan Nuclear Bonanza");
         stage.setScene(scene);
         stage.show();
     }
