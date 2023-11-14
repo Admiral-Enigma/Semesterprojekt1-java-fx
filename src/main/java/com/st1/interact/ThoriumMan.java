@@ -1,7 +1,7 @@
 /*package com.st1.interact;
 
 import com.st1.Context;
-import com.st1.inventory.McFeast;
+import com.st1.inventory.items.McFeast;
 
 public class ThoriumMan extends BaseNpc {
     public ThoriumMan() {
@@ -31,7 +31,7 @@ package com.st1.interact;
 import com.st1.Game;
 import com.st1.interact.quiz.Question;
 import com.st1.interact.quiz.Quiz;
-import com.st1.inventory.Hakke;
+import com.st1.inventory.items.Hakke;
 
 public class ThoriumMan extends BaseNpc implements HasQuiz {
 
