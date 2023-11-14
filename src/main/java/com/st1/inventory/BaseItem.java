@@ -49,6 +49,10 @@ public class BaseItem implements Item {
         return this.quantity;
     }
 
+    @Override
+    public String imagePath() {
+        return "assets/notfound.png";
+    }
 
 
     public String getId() {

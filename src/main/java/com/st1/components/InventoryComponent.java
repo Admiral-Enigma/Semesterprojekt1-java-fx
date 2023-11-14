@@ -1,50 +1,44 @@
 package com.st1.components;
 
+import com.st1.Context;
 import com.st1.Game;
-import com.st1.YurigistanApplication;
+import com.st1.inventory.Item;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Orientation;
-import javafx.geometry.Pos;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
 
-public class InventoryComponent extends AnchorPane {
+public class InventoryComponent extends SimpleComponent {
 
     @FXML
-    TilePane tilePane;
+    private TilePane tilePane;
 
     @FXML
-    HBox background;
+    private HBox background;
 
     public InventoryComponent() {
-        FXMLLoader fxmlLoader = new FXMLLoader(YurigistanApplication.class.getResource("components/inventory-component.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(InventoryComponent.this);
-
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
-        initElements();
+        super("components/inventory-component.fxml");
+        render();
     }
 
-    void initElements() {
+    @Override
+    public void render() {
         AnchorPane.setLeftAnchor(this, 0.0);
         AnchorPane.setRightAnchor(this, 0.0);
-        background.setBorder(Border.stroke(Color.RED));
+        //background.setBorder(Border.stroke(Color.RED));
 
-        tilePane.setPrefRows(1);
-        tilePane.setPrefColumns(10);
+        tilePane.setPrefColumns(Context.inventory.getAllItems().size());
 
         tilePane.setOrientation(Orientation.HORIZONTAL);
 
-        for (int i = 1; i < 10; i++) {
-            tilePane.getChildren().add(new Rectangle(50, 50, Color.rgb(10 + i *10,10 + i *5,10 + i *2 )));
+        for (Item item : Context.inventory.getAllItems()) {
+            tilePane
+                    .getChildren()
+                    .add(new ItemSlot(item));
         }
     }
 }

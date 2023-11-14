@@ -23,4 +23,6 @@ public interface Item {
 
     Integer getQuantity();
 
+    String imagePath();
+
 }
