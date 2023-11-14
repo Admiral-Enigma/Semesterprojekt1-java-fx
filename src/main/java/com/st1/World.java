@@ -2,7 +2,7 @@ package com.st1;/* com.st1.World class for modeling the entire in-game world
  */
 
 import com.st1.interact.*;
-import com.st1.inventory.*;
+import com.st1.inventory.items.*;
 
 public class World {
   Space entry;

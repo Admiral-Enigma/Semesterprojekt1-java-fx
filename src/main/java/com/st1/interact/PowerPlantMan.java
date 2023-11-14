@@ -3,7 +3,7 @@ package com.st1.interact;
 import com.st1.Game;
 import com.st1.interact.quiz.Question;
 import com.st1.interact.quiz.Quiz;
-import com.st1.inventory.SMRContainment;
+import com.st1.inventory.items.SMRContainment;
 
 public class PowerPlantMan extends BaseNpc implements HasQuiz {
 
