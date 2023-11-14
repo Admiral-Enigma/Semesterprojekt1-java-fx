@@ -25,8 +25,7 @@ public class Game extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Context.inventory.add(new McFeast());
-        Context.inventory.add(new McChicken());
+
         context.getCurrent().welcome();
 
 
@@ -36,6 +35,9 @@ public class Game extends Application {
         stage.setScene(scene);
         stage.centerOnScreen();
         stage.show();
+
+        Context.inventory.add(new McFeast());
+        Context.inventory.add(new McChicken());
 
 
         /*

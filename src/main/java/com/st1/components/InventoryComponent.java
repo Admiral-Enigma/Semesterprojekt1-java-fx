@@ -1,16 +1,11 @@
 package com.st1.components;
 
 import com.st1.Context;
-import com.st1.Game;
 import com.st1.inventory.Item;
+import javafx.collections.MapChangeListener;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Orientation;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-
-import java.io.IOException;
 
 public class InventoryComponent extends SimpleComponent {
 
@@ -22,23 +17,27 @@ public class InventoryComponent extends SimpleComponent {
 
     public InventoryComponent() {
         super("components/inventory-component.fxml");
-        render();
+
+
+        // Listen for when the items map changes and rerender inventory UI
+        Context.inventory.getItems().addListener((MapChangeListener<String, Item>) event ->  {
+            onInventoryChanged((MapChangeListener.Change<String, Item>) event);
+        });
+
     }
 
-    @Override
-    public void render() {
+    public void onInventoryChanged(MapChangeListener.Change<String, Item> event) {
+        tilePane.getChildren().clear();
         AnchorPane.setLeftAnchor(this, 0.0);
         AnchorPane.setRightAnchor(this, 0.0);
-        //background.setBorder(Border.stroke(Color.RED));
-
-        tilePane.setPrefColumns(Context.inventory.getAllItems().size());
-
         tilePane.setOrientation(Orientation.HORIZONTAL);
 
-        for (Item item : Context.inventory.getAllItems()) {
+        tilePane.setPrefColumns(Context.inventory.getItemValues().size());
+        for (Item item : Context.inventory.getItemValues()) {
             tilePane
                     .getChildren()
                     .add(new ItemSlot(item));
         }
+
     }
 }
