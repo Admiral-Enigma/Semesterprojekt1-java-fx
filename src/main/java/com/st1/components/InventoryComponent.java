@@ -4,9 +4,9 @@ import com.st1.Game;
 import com.st1.YurigistanApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.TilePane;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -16,6 +16,9 @@ public class InventoryComponent extends AnchorPane {
 
     @FXML
     TilePane tilePane;
+
+    @FXML
+    HBox background;
 
     public InventoryComponent() {
         FXMLLoader fxmlLoader = new FXMLLoader(YurigistanApplication.class.getResource("components/inventory-component.fxml"));
@@ -31,15 +34,17 @@ public class InventoryComponent extends AnchorPane {
     }
 
     void initElements() {
+        AnchorPane.setLeftAnchor(this, 0.0);
+        AnchorPane.setRightAnchor(this, 0.0);
+        background.setBorder(Border.stroke(Color.RED));
 
-        tilePane.setPrefRows(10);
-        tilePane.setPrefColumns(1);
-        tilePane.setTileAlignment(Pos.CENTER);
+        tilePane.setPrefRows(1);
+        tilePane.setPrefColumns(10);
 
-        for (int i = 0; i < 10; i++) {
+        tilePane.setOrientation(Orientation.HORIZONTAL);
+
+        for (int i = 1; i < 10; i++) {
             tilePane.getChildren().add(new Rectangle(50, 50, Color.rgb(10 + i *10,10 + i *5,10 + i *2 )));
         }
-
-
     }
 }
