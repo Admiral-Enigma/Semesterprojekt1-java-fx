@@ -34,7 +34,9 @@ public class Game extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
         stage.setTitle("Yurigistan Nuclear Bonanza");
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.show();
+
 
         /*
         initRegistry();

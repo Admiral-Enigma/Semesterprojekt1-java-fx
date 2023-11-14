@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 
 public class ItemSlot extends SimpleComponent {
     private Item item;
@@ -23,11 +22,11 @@ public class ItemSlot extends SimpleComponent {
 
     @Override
     public void render() {
-        String imagePath = Game.class.getResource(item.imagePath()).toString();
-        ImageView image = new ImageView(imagePath);
-        image.setFitHeight(64);
-        image.setFitWidth(64);
-        button.setGraphic(image);
+        Image image = new Image(Game.class.getResourceAsStream(item.getImagePath()));
+        ImageView imageView = new ImageView(image);
+        imageView.setFitHeight(64);
+        imageView.setFitWidth(64);
+        button.setGraphic(imageView);
         if (item instanceof UsableItem) {
             button.setOnMouseClicked(MouseEvent -> ((UsableItem) item).use(Game.context));
         }
