@@ -3,10 +3,9 @@ package com.st1.components;
 import com.st1.Game;
 import com.st1.inventory.Item;
 import com.st1.inventory.UsableItem;
-import com.st1.util.Img;
+import com.st1.util.Assets;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class ItemSlot extends SimpleComponent {
@@ -23,7 +22,7 @@ public class ItemSlot extends SimpleComponent {
 
     @Override
     public void render() {
-        ImageView imageView = new ImageView(Img.fromAssets("assets/" + item.getImagePath()));
+        ImageView imageView = new ImageView(Assets.imageFromPath("assets/" + item.getImagePath()));
         imageView.setFitHeight(64);
         imageView.setFitWidth(64);
         button.setGraphic(imageView);
