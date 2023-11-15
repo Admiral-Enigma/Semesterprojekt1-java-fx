@@ -5,6 +5,8 @@ import com.st1.commands.CommandUnknown;
 import com.st1.commands.Registry;
 import com.st1.inventory.items.McChicken;
 import com.st1.inventory.items.McFeast;
+import com.st1.inventory.items.SMRGenerator;
+import com.st1.inventory.items.Thorium;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -34,10 +36,12 @@ public class Game extends Application {
         stage.setTitle("Yurigistan Nuclear Bonanza");
         stage.setScene(scene);
         stage.centerOnScreen();
+        stage.setResizable(false);
         stage.show();
 
         Context.inventory.add(new McFeast());
         Context.inventory.add(new McChicken());
+        Context.inventory.add(new SMRGenerator());
 
 
         /*
