@@ -51,7 +51,7 @@ public class BaseItem implements Item {
 
     @Override
     public String getImagePath() {
-        return "assets/notfound.png";
+        return "notfound.png";
     }
 
 

@@ -29,6 +29,6 @@ public class McFeast extends BaseItem implements UsableItem {
 
     @Override
     public String getImagePath() {
-        return "assets/mcfeast.jpg";
+        return "mcfeast.jpg";
     }
 }
