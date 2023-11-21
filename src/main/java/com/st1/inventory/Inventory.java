@@ -1,14 +1,18 @@
 package com.st1.inventory;
 
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableMap;
+
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Inventory {
-    Map<String, Item> items = new HashMap<String, Item>();
+
+    private ObservableMap<String, Item> items;
 
     public Inventory() {
+        items = FXCollections.observableMap(new HashMap<>());
 
     }
 
@@ -46,10 +50,13 @@ public class Inventory {
 
     }
 
-    public Collection<Item> getAllItems() {
+    public Collection<Item> getItemValues() {
         return items.values();
     }
 
+    public ObservableMap<String, Item> getItems() {
+        return items;
+    }
 
     public boolean containsItemOfClass(Class<? extends BaseItem> itemClass) {
         for (Item item : items.values()) {

@@ -26,4 +26,9 @@ public class McFeast extends BaseItem implements UsableItem {
         System.out.println("*Crunching sound* Nom nom taste very very jummyn");
         this.destroy();
     }
+
+    @Override
+    public String getImagePath() {
+        return "mcfeast.jpg";
+    }
 }
