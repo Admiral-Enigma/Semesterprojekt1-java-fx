@@ -28,7 +28,7 @@
         <bottom>
             <BorderPane >
                 <left>
-                    <InventoryComponent/>
+                    <InventoryComponent />
                 </left>
                 <right>
                     <MessagesComponent />

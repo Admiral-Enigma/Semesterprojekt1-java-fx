@@ -34,7 +34,7 @@ public class Hakke extends BaseItem implements UsableItem {
 
         }
         else{
-            System.out.println("Hvad fanden er det du laver?! Du kan sgu da ikke bruge en hakke her!");
+            Game.textPrinter.printText("Hvad fanden er det du laver?! Du kan sgu da ikke bruge en hakke her!");
         }
     }
 }

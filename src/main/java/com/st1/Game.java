@@ -7,6 +7,7 @@ import com.st1.inventory.items.McChicken;
 import com.st1.inventory.items.McFeast;
 import com.st1.inventory.items.SMRGenerator;
 import com.st1.inventory.items.Thorium;
+import com.st1.util.TextPrinter;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -22,8 +23,8 @@ public class Game extends Application {
     public static Context  context  = new Context(world.getEntry());
     static Command fallback = new CommandUnknown();
     static Registry registry = new Registry(context, fallback);
-    static Scanner scanner  = new Scanner(System.in);
 
+    public static TextPrinter textPrinter = new TextPrinter();
 
     @Override
     public void start(Stage stage) throws IOException {

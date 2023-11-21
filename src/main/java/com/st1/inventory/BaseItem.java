@@ -1,6 +1,7 @@
 package com.st1.inventory;
 
 import com.st1.Context;
+import com.st1.Game;
 
 public class BaseItem implements Item {
    private final String name;
@@ -18,10 +19,10 @@ public class BaseItem implements Item {
     }
 
     public void pickup(Context context, boolean silent) {
-        System.out.println("* Player picked up " + this.getQuantity() + " "+ this.getName() + " *");
+        Game.textPrinter.printText("* Player picked up " + this.getQuantity() + " "+ this.getName() + " *");
         Context.inventory.add(this);
         if (!silent) {
-            System.out.println(this.getPickupMessage());
+            Game.textPrinter.printText(this.getPickupMessage());
         }
     }
 
