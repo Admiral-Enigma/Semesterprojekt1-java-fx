@@ -29,10 +29,9 @@ public class Game extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        context.getCurrent().welcome();
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Game.class.getResource("scenes/start-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Game.class.getResource("scenes/game-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
         stage.setTitle("Yurigistan Nuclear Bonanza");
         stage.setScene(scene);
@@ -43,6 +42,7 @@ public class Game extends Application {
         Context.inventory.add(new McFeast());
         Context.inventory.add(new McChicken());
         Context.inventory.add(new SMRGenerator());
+        context.getCurrent().welcome();
 
 
         /*

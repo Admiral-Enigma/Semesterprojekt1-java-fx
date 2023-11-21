@@ -60,10 +60,10 @@ public class Space extends Node {
 
     if (npc == null) {
       if (!visited) {
-        System.out.println(firstVisit);
+        Game.textPrinter.printText(firstVisit);
         visited = true;
       } else {
-        System.out.println(normalVisit);
+        Game.textPrinter.printText(normalVisit);
       }
       printPossibleDirections();
     }
@@ -71,9 +71,9 @@ public class Space extends Node {
 
   private void printPossibleDirections() {
     Set<String> exits = edges.keySet();
-    System.out.println("Du kan gå disse steder hen:");
+    Game.textPrinter.printText("Du kan gå disse steder hen:");
     for (String exit : exits) {
-      System.out.println(" - " + exit);
+      Game.textPrinter.printText(" - " + exit);
     }
   }
 
@@ -92,9 +92,9 @@ public class Space extends Node {
 
   public void listItems() {
     if (items.isEmpty()) {
-      System.out.println("Hmm.. Der ser ikke ud til at være nogle items i dette rum");
+      Game.textPrinter.printText("Hmm.. Der ser ikke ud til at være nogle items i dette rum");
     } else {
-      System.out.println("Items i dette rum:");
+      Game.textPrinter.printText("Items i dette rum:");
       for (Item item : items.values()) {
         System.out.printf(" - %s x [%s] %s%n", item.getQuantity(), item.getId(), item.getName());
       }

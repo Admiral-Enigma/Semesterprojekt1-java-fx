@@ -5,10 +5,8 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.image.ImageView?>
 <?import com.st1.components.InventoryComponent?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import com.st1.components.MessagesComponent?>
 <VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.st1.controllers.StartController">
     <padding>
