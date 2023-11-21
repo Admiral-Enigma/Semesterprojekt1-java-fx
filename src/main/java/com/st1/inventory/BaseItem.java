@@ -1,6 +1,6 @@
 package com.st1.inventory;
 
-import com.st1.Context;
+import com.st1.core.Context;
 import com.st1.Game;
 
 public class BaseItem implements Item {

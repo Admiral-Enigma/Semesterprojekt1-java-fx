@@ -1,4 +1,4 @@
-package com.st1;/* com.st1.World class for modeling the entire in-game world
+package com.st1.core;/* com.st1.core.World class for modeling the entire in-game world
  */
 
 import com.st1.interact.*;
@@ -15,7 +15,7 @@ public class World {
 
   SceneManager sceneManager;
 
-  World () {
+  public World() {
     ThoriumMan thoriumMan = new ThoriumMan();
     PripyatMan pripyatMan = new PripyatMan();
     FukushimaMan fukushimaMan = new FukushimaMan();
@@ -90,7 +90,7 @@ public class World {
     this.entry = startPoint;
   }
   
-  Space getEntry () {
+  public Space getEntry() {
     return entry;
   }
 }

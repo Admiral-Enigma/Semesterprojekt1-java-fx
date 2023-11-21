@@ -1,23 +1,16 @@
-package com.st1.controllers;
+package com.st1.ui.controllers;
 
-import com.st1.Context;
 import com.st1.Game;
-import com.st1.components.InventoryComponent;
-import com.st1.components.MessagesComponent;
+import com.st1.ui.components.InventoryComponent;
+import com.st1.ui.components.MessagesComponent;
 import com.st1.inventory.items.Hakke;
 import com.st1.ui.GameScene;
-import com.st1.ui.SceneManager;
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.SubScene;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.Map;
 import java.util.ResourceBundle;

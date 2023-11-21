@@ -1,6 +1,6 @@
 /*package com.st1.interact;
 
-import com.st1.Context;
+import com.st1.core.Context;
 import com.st1.inventory.items.McFeast;
 
 public class ThoriumMan extends BaseNpc {

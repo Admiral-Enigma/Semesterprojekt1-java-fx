@@ -1,4 +1,4 @@
-package com.st1.components;
+package com.st1.ui.components;
 
 public interface ViewComponent {
 

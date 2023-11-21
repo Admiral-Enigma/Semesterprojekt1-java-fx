@@ -1,6 +1,5 @@
-package com.st1.controllers;
+package com.st1.ui.controllers;
 
-import com.st1.Context;
 import com.st1.Game;
 import javafx.event.ActionEvent;
 

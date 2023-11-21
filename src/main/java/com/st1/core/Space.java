@@ -1,12 +1,12 @@
-package com.st1;
+package com.st1.core;
 
+import com.st1.Game;
 import com.st1.interact.BaseNpc;
 import com.st1.interact.HasQuiz;
 import com.st1.inventory.Item;
 import com.st1.ui.GameScene;
 
 import java.util.HashMap;
-import java.util.Set;
 
 
 public class Space extends Node {

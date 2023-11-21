@@ -1,7 +1,7 @@
 package com.st1.commands;/* com.st1.commands.Command for transitioning between spaces
  */
 
-import com.st1.Context;
+import com.st1.core.Context;
 
 public class CommandGo extends BaseCommand implements Command {
   public CommandGo() {

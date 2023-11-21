@@ -1,4 +1,4 @@
-package com.st1;/* com.st1.Node class for modeling graphs
+package com.st1.core;/* com.st1.core.Node class for modeling graphs
  */
 
 import java.util.HashMap;

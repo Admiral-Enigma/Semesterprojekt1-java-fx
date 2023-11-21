@@ -1,13 +1,10 @@
-package com.st1.components;
+package com.st1.ui.components;
 
-import com.st1.Context;
 import com.st1.Game;
 import com.st1.inventory.Item;
 import javafx.collections.MapChangeListener;
-import javafx.fxml.FXML;
 import javafx.geometry.Orientation;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 
 public class InventoryComponent  {
 

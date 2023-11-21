@@ -1,7 +1,7 @@
 package com.st1.ui;
 
 import com.st1.Game;
-import com.st1.controllers.ViewController;
+import com.st1.ui.controllers.ViewController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 

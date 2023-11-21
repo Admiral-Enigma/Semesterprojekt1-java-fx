@@ -1,6 +1,6 @@
 package com.st1.commands;
 
-import com.st1.Context;
+import com.st1.core.Context;
 
 public class CommandUnknown extends BaseCommand implements Command {
   @Override

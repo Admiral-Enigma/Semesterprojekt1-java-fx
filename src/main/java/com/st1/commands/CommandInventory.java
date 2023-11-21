@@ -1,6 +1,6 @@
 package com.st1.commands;
 
-import com.st1.Context;
+import com.st1.core.Context;
 import com.st1.Game;
 import com.st1.inventory.Item;
 
