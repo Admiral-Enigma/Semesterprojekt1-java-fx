@@ -28,8 +28,6 @@ public class InventoryComponent extends SimpleComponent {
 
     public void onInventoryChanged(MapChangeListener.Change<String, Item> event) {
         tilePane.getChildren().clear();
-        AnchorPane.setLeftAnchor(this, 0.0);
-        AnchorPane.setRightAnchor(this, 0.0);
         tilePane.setOrientation(Orientation.HORIZONTAL);
 
         tilePane.setPrefColumns(Context.inventory.getItemValues().size());
