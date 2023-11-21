@@ -47,7 +47,7 @@ public class ThoriumMan extends BaseNpc implements HasQuiz {
 
         Question question2 = new Question("Hvad er den primære fordel ved thoriumreaktorer i forhold til sikkerhed i sammenligning med uranreaktorer? ", 1, "rigtigt \n Her er en Hakke");
         question2
-                .addChoice("Hvad er den primære fordel ved thoriumreaktorer i forhold til sikkerhed i sammenligning med uranreaktorer? ")
+                .addChoice("Thoriumreaktorer og uranreaktorer er lige sikre i forhold til risikoen for en kernekraftsulykke, men uran er mere radioaktivt end thorium.  ")
                 .addChoice("Thoriumreaktorer er mere sikre og har en lavere risiko for kernekraftulykker og kernevåbenproliferation på \ngrund af deres design og sværere udvinding af våbenfissilt materiale. ");
 
         this.quiz = new Quiz();
