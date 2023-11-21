@@ -3,9 +3,17 @@ package com.st1;/* com.st1.World class for modeling the entire in-game world
 
 import com.st1.interact.*;
 import com.st1.inventory.items.*;
+import com.st1.ui.GameScene;
+import com.st1.ui.SceneManager;
 
 public class World {
   Space entry;
+
+  public void setSceneManager(SceneManager sceneManager) {
+    this.sceneManager = sceneManager;
+  }
+
+  SceneManager sceneManager;
 
   World () {
     ThoriumMan thoriumMan = new ThoriumMan();
@@ -24,6 +32,8 @@ public class World {
     Space deep_thorium          = new Space("Deep in the Mine", "Hej det er første gang du er ved deep_thorium", "Velkommen tilbage til deep_thorium");
 
     startPoint.addEdge("road", power_plant_outside);
+
+    startPoint.setGameScene(new GameScene("fxml/spaces/start.fxml", sceneManager));
     startPoint.setNpc(new TestInfoMan());
     McFeast mcfeast = new McFeast();
     mcfeast.setQuantity(2432);
@@ -31,47 +41,51 @@ public class World {
               .addItem(new McChicken());
 
     power_plant_outside.addEdge("start", startPoint);
+
     power_plant_outside.addEdge("lobby", power_plant_lobby);
     power_plant_outside.addEdge("mine", thorium_mine);
     power_plant_outside.addEdge("airstrip", airstrip);
     power_plant_outside.setNpc(new OutsideInfoMan());
+    power_plant_outside.setGameScene(new GameScene("fxml/spaces/power_plant_outside.fxml", sceneManager));
 
-    thorium_mine.addEdge("outside", power_plant_outside);
+    /*thorium_mine.addEdge("outside", power_plant_outside);
     thorium_mine.addEdge("airstrip", airstrip);
-    thorium_mine.addEdge("deeper", deep_thorium);
+    thorium_mine.addEdge("deeper", deep_thorium);*/
 
     deep_thorium.setNpc(new ThoriumMan());
     thorium_mine.setNpc(new MineMan());
 
-    deep_thorium.addEdge("surface", thorium_mine);
+    /*deep_thorium.addEdge("surface", thorium_mine);*/
     thorium_mine.addItem(new Hakke());
 
 
 
     airstrip.setNpc(new AirstripWoman());
-    airstrip.addEdge("fly_east", fukushima);
+    /*airstrip.addEdge("fly_east", fukushima);
     airstrip.addEdge("fly_west", pripyat);
     airstrip.addEdge("outside", power_plant_outside);
     airstrip.addEdge("mine", thorium_mine);
 
-    fukushima.addEdge("fly_back", airstrip);
+    fukushima.addEdge("fly_back", airstrip);*/
     fukushima.addItem(new SMRContainment());
     fukushima.setNpc(fukushimaMan);
 
-    pripyat.addEdge("fly_back", airstrip);
+    //pripyat.addEdge("fly_back", airstrip);
     pripyat.addItem(new SMRTurbine());
     pripyat.setNpc(pripyatMan);
 
 
-    power_plant_lobby.addEdge("left_door", power_plant_boiler);
+    /*power_plant_lobby.addEdge("left_door", power_plant_boiler);
     power_plant_lobby.addEdge("right_door", power_plant_turbine);
     power_plant_lobby.addEdge("exit", power_plant_outside);
+
+     */
     power_plant_boiler.addItem(new SMRGenerator());
     power_plant_lobby.setNpc(new PowerPlantMan());
 
-    power_plant_boiler.addEdge("lobby", power_plant_lobby);
+    /*power_plant_boiler.addEdge("lobby", power_plant_lobby);
 
-    power_plant_turbine.addEdge("lobby", power_plant_lobby);
+    power_plant_turbine.addEdge("lobby", power_plant_lobby);*/
 
     this.entry = startPoint;
   }

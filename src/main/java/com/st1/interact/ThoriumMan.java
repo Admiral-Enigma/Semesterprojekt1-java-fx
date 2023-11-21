@@ -15,7 +15,7 @@ public class ThoriumMan extends BaseNpc {
 
     @Override
     public void normalSightingMessage() {
-        if (Context.inventory.containsItemOfClass(McFeast.class)) {
+        if (Game.context.inventory.containsItemOfClass(McFeast.class)) {
             System.out.println("Jamen det er jo en McFeast");
         } else {
             System.out.println("Har du fundet værktøjet?\nNej? Jamen så se at få det fundet");

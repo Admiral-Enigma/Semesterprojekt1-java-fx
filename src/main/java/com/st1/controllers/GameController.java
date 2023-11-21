@@ -7,6 +7,8 @@ import com.st1.components.MessagesComponent;
 import com.st1.inventory.items.Hakke;
 import com.st1.ui.GameScene;
 import com.st1.ui.SceneManager;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.SubScene;
@@ -17,6 +19,7 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class GameController extends ViewController implements Initializable {
@@ -28,23 +31,33 @@ public class GameController extends ViewController implements Initializable {
 
     private InventoryComponent inventoryComponent;
     private MessagesComponent messagesComponent;
-
-    private SceneManager worldSceneManager;
+    private Map<String, GameScene> spaces;
 
 
     @FXML
-    protected void onHelloButtonClick() throws IOException {
-
-        GameScene testScene = new GameScene("fxml/test.fxml", getSceneManager());
+    protected void onHelloButtonClick() {
+        GameScene testScene = new GameScene("fxml/start.fxml", getSceneManager());
         currentRoom.getChildren().clear();
 
         currentRoom.getChildren().add(testScene.getRootElement());
-        Context.inventory.add(new Hakke());
+        Game.context.inventory.add(new Hakke());
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        renderCurrentSpace();
+
         this.inventoryComponent = new InventoryComponent(inventoryTilePane);
         this.messagesComponent = new MessagesComponent(messagesTextArea);
+        Game.context.addListener(observable -> renderCurrentSpace());
     }
+
+    private void renderCurrentSpace() {
+        currentRoom.getChildren().clear();
+        currentRoom.getChildren().add(Game.context.getCurrent().getGameScene().getRootElement());
+    }
+
+
+
+
 }

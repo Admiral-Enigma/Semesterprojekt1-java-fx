@@ -32,6 +32,7 @@ public class Game extends Application {
     public void start(Stage stage) throws IOException {
         this.mainStage = stage;
         this.sceneManager = new SceneManager(stage);
+        Game.world.setSceneManager(sceneManager);
 
 
         FXMLLoader fxmlLoader = new FXMLLoader(Game.class.getResource("scenes/game-view.fxml"));
@@ -42,16 +43,16 @@ public class Game extends Application {
         sceneManager.createScene("menu", "fxml/menu-view.fxml");
 
         sceneManager.createScene("game", "fxml/game-view.fxml");
-        sceneManager.createScene("test", "fxml/test.fxml");
+        sceneManager.createScene("test", "fxml/start.fxml");
 
         sceneManager.transitionScene("menu");
 
         mainStage.setResizable(false);
         mainStage.show();
 
-        Context.inventory.add(new McFeast());
-        Context.inventory.add(new McChicken());
-        Context.inventory.add(new SMRGenerator());
+        context.inventory.add(new McFeast());
+        context.inventory.add(new McChicken());
+        context.inventory.add(new SMRGenerator());
         //context.getCurrent().welcome();
 
     }

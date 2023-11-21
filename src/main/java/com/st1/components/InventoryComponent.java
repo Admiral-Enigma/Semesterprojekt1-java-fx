@@ -1,6 +1,7 @@
 package com.st1.components;
 
 import com.st1.Context;
+import com.st1.Game;
 import com.st1.inventory.Item;
 import javafx.collections.MapChangeListener;
 import javafx.fxml.FXML;
@@ -18,7 +19,7 @@ public class InventoryComponent  {
         this.tilePane = tilePane;
 
         // Listen for when the items map changes and rerender inventory UI
-        Context.inventory.getItems().addListener((MapChangeListener<String, Item>) event -> render());
+        Game.context.inventory.getItems().addListener((MapChangeListener<String, Item>) event -> render());
         render();
     }
 
@@ -26,8 +27,8 @@ public class InventoryComponent  {
         tilePane.getChildren().clear();
         tilePane.setOrientation(Orientation.HORIZONTAL);
 
-        tilePane.setPrefColumns(Context.inventory.getItemValues().size());
-        for (Item item : Context.inventory.getItemValues()) {
+        tilePane.setPrefColumns(Game.context.inventory.getItemValues().size());
+        for (Item item : Game.context.inventory.getItemValues()) {
             tilePane
                     .getChildren()
                     .add(new ItemSlot(item));

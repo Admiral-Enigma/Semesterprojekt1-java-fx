@@ -3,6 +3,7 @@ package com.st1;
 import com.st1.interact.BaseNpc;
 import com.st1.interact.HasQuiz;
 import com.st1.inventory.Item;
+import com.st1.ui.GameScene;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -13,6 +14,16 @@ public class Space extends Node {
   private String firstVisit;
   private String normalVisit;
   private boolean visited = false;
+
+  public GameScene getGameScene() {
+    return gameScene;
+  }
+
+  public void setGameScene(GameScene gameScene) {
+    this.gameScene = gameScene;
+  }
+
+  private GameScene gameScene;
 
   public BaseNpc getNpc() {
     return npc;
@@ -54,7 +65,6 @@ public class Space extends Node {
         } else {
           npc.normalSightingMessage();
         }
-        printPossibleDirections();
       }
     }
 
@@ -65,17 +75,9 @@ public class Space extends Node {
       } else {
         Game.textPrinter.printText(normalVisit);
       }
-      printPossibleDirections();
     }
   }
 
-  private void printPossibleDirections() {
-    Set<String> exits = edges.keySet();
-    Game.textPrinter.printText("Du kan gå disse steder hen:");
-    for (String exit : exits) {
-      Game.textPrinter.printText(" - " + exit);
-    }
-  }
 
   public void setNpc(BaseNpc npc) {
     this.npc = npc;
@@ -85,10 +87,6 @@ public class Space extends Node {
     // Implementation for the goodbye method
   }
 
-  @Override
-  public Space followEdge(String direction) {
-    return (Space) super.followEdge(direction);
-  }
 
   public void listItems() {
     if (items.isEmpty()) {

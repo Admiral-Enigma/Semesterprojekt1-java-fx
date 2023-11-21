@@ -17,7 +17,7 @@ public class CommandPlace extends BaseCommand implements Command {
         }
 
         try {
-            Item item = Context.inventory.getItem(parameters[0]);
+            Item item = Game.context.inventory.getItem(parameters[0]);
             if(item instanceof PlaceableItem){
                 ((PlaceableItem) item).place(context);
 

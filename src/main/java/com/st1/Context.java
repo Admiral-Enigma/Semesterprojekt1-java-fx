@@ -2,12 +2,19 @@ package com.st1;/* com.st1.Context class to hold all context relevant to a sessi
  */
 
 import com.st1.inventory.Inventory;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 
-public class Context {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Context implements Observable {
   Space current;
-  public static Inventory inventory;
-  Context (Space node) {
+  public  Inventory inventory;
 
+  private List<InvalidationListener> listeners = new ArrayList<>();
+
+  Context (Space node) {
     current = node;
     inventory = new Inventory();
   }
@@ -17,14 +24,35 @@ public class Context {
   }
   
   public void transition (String direction) {
-    Space next = current.followEdge(direction);
+    Space next = (Space) current.followEdge(direction);
     if (next==null) {
       System.out.println("You are confused, and walk in a circle looking for '"+direction+"'. In the end you give up 😩");
     } else {
       current.goodbye();
       current = next;
       current.welcome();
+      notifyObservers();
     }
   }
+
+  @Override
+  public void addListener(InvalidationListener invalidationListener) {
+    listeners.add(invalidationListener);
+
+  }
+
+  @Override
+  public void removeListener(InvalidationListener invalidationListener) {
+    listeners.remove(invalidationListener);
+  }
+
+  private void notifyObservers() {
+    for (InvalidationListener listener : listeners) {
+      listener.invalidated(this);
+    }
+  }
+
+
+
 }
 
