@@ -8,26 +8,21 @@ import javafx.geometry.Orientation;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
-public class InventoryComponent extends SimpleComponent {
+public class InventoryComponent  {
 
-    @FXML
     private TilePane tilePane;
 
-    @FXML
     private HBox background;
 
-    public InventoryComponent() {
-        super("components/inventory-component.fxml");
-
+    public InventoryComponent(TilePane tilePane) {
+        this.tilePane = tilePane;
 
         // Listen for when the items map changes and rerender inventory UI
-        Context.inventory.getItems().addListener((MapChangeListener<String, Item>) event ->  {
-            onInventoryChanged((MapChangeListener.Change<String, Item>) event);
-        });
-
+        Context.inventory.getItems().addListener((MapChangeListener<String, Item>) event -> render());
+        render();
     }
 
-    public void onInventoryChanged(MapChangeListener.Change<String, Item> event) {
+    public void render() {
         tilePane.getChildren().clear();
         tilePane.setOrientation(Orientation.HORIZONTAL);
 
@@ -37,6 +32,6 @@ public class InventoryComponent extends SimpleComponent {
                     .getChildren()
                     .add(new ItemSlot(item));
         }
-
     }
+
 }

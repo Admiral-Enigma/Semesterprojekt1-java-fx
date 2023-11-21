@@ -9,17 +9,12 @@ import java.io.PrintStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MessagesComponent extends SimpleComponent implements Initializable {
+public class MessagesComponent {
 
-    @FXML
     private TextArea textArea;
 
-    public MessagesComponent() {
-        super("components/messages-component.fxml");
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public MessagesComponent(TextArea textArea) {
+        this.textArea = textArea;
         Game.textPrinter.setMessageArea(textArea);
     }
 }
