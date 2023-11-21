@@ -32,4 +32,8 @@ public class SMRTurbine extends BaseItem implements Item, PlaceableItem {
         System.out.println("Turbinen passer perfekt her! Godt arbejde");
         Game.newReactorState.turbinePlaced = true;
     }
+    @Override
+    public String getImagePath() {
+        return "turbine.png";
+    }
 }

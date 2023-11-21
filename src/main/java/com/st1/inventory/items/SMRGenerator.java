@@ -34,4 +34,9 @@ public class SMRGenerator extends BaseItem implements Item, PlaceableItem {
         System.out.println("Generatoren passer perfekt her, godt arbejde!");
         Game.newReactorState.generatorPlaced = true;
     }
+    @Override
+    public String getImagePath() {
+        return "Generator.png";
+    }
 }
+

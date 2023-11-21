@@ -35,4 +35,8 @@ public class SMRReactorVessel extends BaseItem implements Item, PlaceableItem {
         System.out.println("Reaktorbeholderen passer perfekt ind her. Nu mangler vi kun resten af delene! Godt arbejde");
         Game.newReactorState.reactorVesselPlaced = true;
     }
+    @Override
+    public String getImagePath() {
+        return "reactor-vessel.png";
+    }
 }

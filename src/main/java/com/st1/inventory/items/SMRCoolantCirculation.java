@@ -13,7 +13,7 @@ public class SMRCoolantCirculation extends BaseItem implements Item, PlaceableIt
     //Coolant Circulation fås i forbindelse med dialog.
     @Override
     public String getPickupMessage() {
-        return "Du har fundet køle-cirkulationen til reaktoren.\n "
+        return "Du har fundet nedkølingsvæsken til reaktoren.\n "
                 + "Den skal nedkøle reaktoren, så den producerer den rigtige mængde energi, uden at overophede, hele tiden.";
     }
 
@@ -26,13 +26,17 @@ public class SMRCoolantCirculation extends BaseItem implements Item, PlaceableIt
     @Override
     public void place(Context context) {
         if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.reactorVesselPlaced != true) {
-            System.out.println("Køle-cirkulationen passer ikke her. Mangler der noget, eller er du i det rigtige rum?");
+            System.out.println("Nedkølingsvæsken passer ikke her. Mangler der noget, eller er du i det rigtige rum?");
             return;
         }
 
         this.destroy();
-        System.out.println("Her kan køle-cirkulationen virkelig bruges! Godt arbejde!");
+        System.out.println("Her kan Nedkølingsvæsken virkelig bruges! Godt arbejde!");
         Game.newReactorState.coolantCirculationPlaced = true;
 
+    }
+    @Override
+    public String getImagePath() {
+        return "coolant.png";
     }
 }
