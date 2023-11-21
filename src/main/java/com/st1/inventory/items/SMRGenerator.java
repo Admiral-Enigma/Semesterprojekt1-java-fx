@@ -26,12 +26,12 @@ public class SMRGenerator extends BaseItem implements Item, PlaceableItem {
     @Override
     public void place(Context context) {
         if (context.getCurrent().getName() != "Turbine Room") {
-            System.out.println("Du kan ikke placere generatoren her!");
+            Game.textPrinter.printText("Du kan ikke placere generatoren her!");
             return;
         }
 
         this.destroy();
-        System.out.println("Generatoren passer perfekt her, godt arbejde!");
+        Game.textPrinter.printText("Generatoren passer perfekt her, godt arbejde!");
         Game.newReactorState.generatorPlaced = true;
     }
 }

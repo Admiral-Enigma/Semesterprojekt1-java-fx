@@ -6,6 +6,7 @@ import javafx.collections.MapChangeListener;
 import javafx.fxml.FXML;
 import javafx.geometry.Orientation;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 
 public class InventoryComponent extends SimpleComponent {
 

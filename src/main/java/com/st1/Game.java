@@ -7,6 +7,7 @@ import com.st1.inventory.items.McChicken;
 import com.st1.inventory.items.McFeast;
 import com.st1.inventory.items.SMRGenerator;
 import com.st1.inventory.items.Thorium;
+import com.st1.util.TextPrinter;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -22,16 +23,15 @@ public class Game extends Application {
     public static Context  context  = new Context(world.getEntry());
     static Command fallback = new CommandUnknown();
     static Registry registry = new Registry(context, fallback);
-    static Scanner scanner  = new Scanner(System.in);
 
+    public static TextPrinter textPrinter = new TextPrinter();
 
     @Override
     public void start(Stage stage) throws IOException {
 
-        context.getCurrent().welcome();
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Game.class.getResource("scenes/start-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Game.class.getResource("scenes/game-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
         stage.setTitle("Yurigistan Nuclear Bonanza");
         stage.setScene(scene);
@@ -42,6 +42,7 @@ public class Game extends Application {
         Context.inventory.add(new McFeast());
         Context.inventory.add(new McChicken());
         Context.inventory.add(new SMRGenerator());
+        context.getCurrent().welcome();
 
 
         /*

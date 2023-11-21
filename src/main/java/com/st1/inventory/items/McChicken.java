@@ -1,6 +1,7 @@
 package com.st1.inventory.items;
 
 import com.st1.Context;
+import com.st1.Game;
 import com.st1.inventory.BaseItem;
 import com.st1.inventory.UsableItem;
 
@@ -23,7 +24,7 @@ public class McChicken extends BaseItem implements UsableItem {
     @Override
     public void use(Context context) {
 
-        System.out.println("*Crunching sound* MHHHMMMMM FØJ - FOR - HELVEEEEEDE");
+        Game.textPrinter.printText("*Crunching sound* MHHHMMMMM FØJ - FOR - HELVEEEEEDE");
         this.destroy();
     }
 }
