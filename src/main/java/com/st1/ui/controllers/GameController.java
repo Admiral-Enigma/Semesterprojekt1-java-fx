@@ -27,15 +27,6 @@ public class GameController extends ViewController implements Initializable {
     private Map<String, GameScene> spaces;
 
 
-    @FXML
-    protected void onHelloButtonClick() {
-        GameScene testScene = new GameScene("fxml/start.fxml", getSceneManager());
-        currentRoom.getChildren().clear();
-
-        currentRoom.getChildren().add(testScene.getRootElement());
-        Game.context.inventory.add(new Hakke());
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         renderCurrentSpace();

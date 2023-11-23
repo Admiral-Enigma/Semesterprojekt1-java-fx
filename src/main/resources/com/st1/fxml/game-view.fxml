@@ -22,7 +22,6 @@
         <center>
 
             <VBox fx:id="currentRoom" alignment="CENTER">
-                <Button text="Hello!" onAction="#onHelloButtonClick"/>
             </VBox>
         </center>
         <bottom>
