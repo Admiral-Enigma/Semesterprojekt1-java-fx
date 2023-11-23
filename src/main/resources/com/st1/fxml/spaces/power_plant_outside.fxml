@@ -4,15 +4,15 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.PowerPlantOutsideController">
+<AnchorPane maxHeight="610.0" maxWidth="1180.0" prefHeight="610" prefWidth="1180" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.PowerPlantOutsideController">
    <children>
-      <Label layoutX="142.0" layoutY="96.0" fx:id="title" text="Power plant outside" />
+      <Label fx:id="title" layoutX="142.0" layoutY="96.0" text="Power plant outside" />
       <Button layoutX="142.0" layoutY="180.0" mnemonicParsing="false" onAction="#gotoStart" prefHeight="83.0" prefWidth="146.0" text="Gå til start" />
       <ImageView fitHeight="343.0" fitWidth="438.0" layoutX="538.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="https://upload.wikimedia.org/wikipedia/sco/7/70/Bob_at_Easel.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="207.0" layoutY="435.0" mnemonicParsing="false" prefHeight="143.0" prefWidth="201.0" onAction="#mcFeastify" text="McFeastify" />
+      <Button layoutX="207.0" layoutY="435.0" mnemonicParsing="false" onAction="#mcFeastify" prefHeight="143.0" prefWidth="201.0" text="McFeastify" />
    </children>
 </AnchorPane>

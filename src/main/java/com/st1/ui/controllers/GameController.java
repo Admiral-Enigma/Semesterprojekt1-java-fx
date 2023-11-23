@@ -40,8 +40,4 @@ public class GameController extends ViewController implements Initializable {
         currentRoom.getChildren().clear();
         currentRoom.getChildren().add(Game.context.getCurrent().getGameScene().getRootElement());
     }
-
-
-
-
 }
