@@ -1,4 +1,4 @@
-package com.st1;
+package com.st1.core;
 
 public enum GameState {
     IN_CONTEXT,

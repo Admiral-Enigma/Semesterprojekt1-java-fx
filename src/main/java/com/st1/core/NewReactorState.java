@@ -1,4 +1,4 @@
-package com.st1;
+package com.st1.core;
 
 public class NewReactorState {
     public boolean containmentVesselPlaced = false;

@@ -1,7 +1,7 @@
 package com.st1.commands;/* com.st1.commands.Command registry
  */
 
-import com.st1.Context;
+import com.st1.core.Context;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,6 @@
 /*package com.st1.interact;
 
-import com.st1.Context;
+import com.st1.core.Context;
 import com.st1.inventory.items.McFeast;
 
 public class ThoriumMan extends BaseNpc {
@@ -15,7 +15,7 @@ public class ThoriumMan extends BaseNpc {
 
     @Override
     public void normalSightingMessage() {
-        if (Context.inventory.containsItemOfClass(McFeast.class)) {
+        if (Game.context.inventory.containsItemOfClass(McFeast.class)) {
             System.out.println("Jamen det er jo en McFeast");
         } else {
             System.out.println("Har du fundet værktøjet?\nNej? Jamen så se at få det fundet");

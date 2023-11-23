@@ -1,7 +1,7 @@
 package com.st1.commands;
 
-import com.st1.Context;
-import com.st1.Space;
+import com.st1.core.Context;
+import com.st1.core.Space;
 
 public class CommandSearch extends BaseCommand implements Command {
     public CommandSearch() {

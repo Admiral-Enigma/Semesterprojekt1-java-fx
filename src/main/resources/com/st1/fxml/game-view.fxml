@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import com.st1.ui.components.InventoryComponent?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import com.st1.ui.components.MessagesComponent?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.SubScene?>
+<VBox alignment="CENTER" prefHeight="700" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.GameController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <BorderPane prefHeight="700">
+        <center>
+
+            <VBox fx:id="currentRoom" alignment="CENTER">
+                <Button text="Hello!" onAction="#onHelloButtonClick"/>
+            </VBox>
+        </center>
+        <bottom>
+            <BorderPane >
+                <left>
+                    <TilePane hgap="10" prefRows="1" fx:id="inventoryTilePane"/>
+                </left>
+                <right>
+                    <TextArea fx:id="messagesTextArea" editable="false" focusTraversable="false" wrapText="true" maxHeight="90">
+                    </TextArea>
+                    <!--<MessagesComponent />-->
+                </right>
+            </BorderPane>
+        </bottom>
+    </BorderPane>
+</VBox>
+
