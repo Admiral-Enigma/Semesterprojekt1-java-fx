@@ -79,14 +79,17 @@ public class World {
     power_plant_lobby.addEdge("left_door", power_plant_boiler);
     power_plant_lobby.addEdge("right_door", power_plant_turbine);
     power_plant_lobby.addEdge("exit", power_plant_outside);
+    power_plant_lobby.setGameScene(new GameScene("fxml/spaces/power_plant_lobby.fxml", sceneManager));
 
 
     power_plant_boiler.addItem(new SMRGenerator());
     power_plant_lobby.setNpc(new PowerPlantMan());
 
     power_plant_boiler.addEdge("lobby", power_plant_lobby);
+    power_plant_boiler.setGameScene(new GameScene("fxml/spaces/power_plant_boiler.fxml", sceneManager));
 
     power_plant_turbine.addEdge("lobby", power_plant_lobby);
+    power_plant_turbine.setGameScene(new GameScene("fxml/spaces/power_plant_turbine.fxml", sceneManager));
 
     this.entry = startPoint;
   }
