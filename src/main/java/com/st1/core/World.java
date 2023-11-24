@@ -42,14 +42,14 @@ public class World {
 
     power_plant_outside.addEdge("start", startPoint);
 
-    power_plant_outside.addEdge("lobby", power_plant_lobby);
+    power_plant_outside.addEdge("power_plant_lobby", power_plant_lobby);
     power_plant_outside.addEdge("mine", thorium_mine);
     power_plant_outside.addEdge("airstrip", airstrip);
     power_plant_outside.setNpc(new OutsideInfoMan());
 
     power_plant_outside.setGameScene(new GameScene("fxml/spaces/power_plant_outside.fxml", sceneManager));
 
-    thorium_mine.addEdge("outside", power_plant_outside);
+    thorium_mine.addEdge("power_plant_outside", power_plant_outside);
     thorium_mine.addEdge("airstrip", airstrip);
     thorium_mine.addEdge("deeper", deep_thorium);
 
@@ -64,7 +64,7 @@ public class World {
     airstrip.setNpc(new AirstripWoman());
     airstrip.addEdge("fly_east", fukushima);
     airstrip.addEdge("fly_west", pripyat);
-    airstrip.addEdge("outside", power_plant_outside);
+    airstrip.addEdge("power_plant_outside", power_plant_outside);
     airstrip.addEdge("mine", thorium_mine);
 
     fukushima.addEdge("fly_back", airstrip);
@@ -76,19 +76,19 @@ public class World {
     pripyat.setNpc(pripyatMan);
 
 
-    power_plant_lobby.addEdge("left_door", power_plant_boiler);
-    power_plant_lobby.addEdge("right_door", power_plant_turbine);
-    power_plant_lobby.addEdge("exit", power_plant_outside);
+    power_plant_lobby.addEdge("power_plant_boiler", power_plant_boiler);
+    power_plant_lobby.addEdge("power_plant_turbine", power_plant_turbine);
+    power_plant_lobby.addEdge("power_plant_outside", power_plant_outside);
     power_plant_lobby.setGameScene(new GameScene("fxml/spaces/power_plant_lobby.fxml", sceneManager));
 
 
     power_plant_boiler.addItem(new SMRGenerator());
     power_plant_lobby.setNpc(new PowerPlantMan());
 
-    power_plant_boiler.addEdge("lobby", power_plant_lobby);
+    power_plant_boiler.addEdge("power_plant_lobby", power_plant_lobby);
     power_plant_boiler.setGameScene(new GameScene("fxml/spaces/power_plant_boiler.fxml", sceneManager));
 
-    power_plant_turbine.addEdge("lobby", power_plant_lobby);
+    power_plant_turbine.addEdge("power_plant_lobby", power_plant_lobby);
     power_plant_turbine.setGameScene(new GameScene("fxml/spaces/power_plant_turbine.fxml", sceneManager));
 
     this.entry = startPoint;
