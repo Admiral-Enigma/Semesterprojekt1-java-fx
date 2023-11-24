@@ -5,7 +5,7 @@ import com.st1.core.GameState;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 
-public class PowerPlantTurbineController {
+public class PowerPlantTurbineController extends ViewController {
     public Label title;
 
     public void goLobby(ActionEvent actionEvent) {
