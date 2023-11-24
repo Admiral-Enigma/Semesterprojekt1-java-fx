@@ -32,5 +32,10 @@ public class Hakke extends BaseItem implements UsableItem {
             Game.textPrinter.printText("Hvad fanden er det du laver?! Du kan sgu da ikke bruge en hakke her!");
         }
     }
+
+    @Override
+    public String getImagePath() {
+        return "pickaxe.png";
+    }
 }
 

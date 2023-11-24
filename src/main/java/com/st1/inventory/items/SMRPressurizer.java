@@ -33,4 +33,8 @@ public class SMRPressurizer extends BaseItem implements Item, PlaceableItem {
         System.out.println("Reaktor-kernen passede perfekt ind i beholderen, nu sker der noget.");
         Game.newReactorState.pressurizerPlaced = true;
     }
+    @Override
+    public String getImagePath() {
+        return "Pressurizer.png";
+    }
 }
