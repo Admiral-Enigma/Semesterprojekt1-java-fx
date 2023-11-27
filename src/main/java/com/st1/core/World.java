@@ -53,7 +53,7 @@ public class World {
     thorium_mine.addEdge("airstrip", airstrip);
     thorium_mine.addEdge("deeper", deep_thorium);
 
-    thorium_mine.setGameScene(new GameScene("fxml/spaces/ThoriumMine.fxml", sceneManager));
+    thorium_mine.setGameScene(new GameScene("fxml/spaces/thorium_mine.fxml", sceneManager));
 
     deep_thorium.setNpc(new ThoriumMan());
     thorium_mine.setNpc(new MineMan());
