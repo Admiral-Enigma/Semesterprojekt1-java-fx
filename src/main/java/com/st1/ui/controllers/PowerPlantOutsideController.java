@@ -16,4 +16,6 @@ public class PowerPlantOutsideController extends ViewController {
     public void mcFeastify(ActionEvent actionEvent) {
         title.setText("MCFEAST BBBY");
     }
+
+
 }
