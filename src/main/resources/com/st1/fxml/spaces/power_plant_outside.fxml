@@ -17,5 +17,6 @@
          </image>
       </ImageView>
       <Button layoutX="207.0" layoutY="435.0" mnemonicParsing="false" onAction="#mcFeastify" prefHeight="143.0" prefWidth="201.0" text="McFeastify" />
+      <Button layoutX="69.0" layoutY="263.0" mnemonicParsing="false" onAction="#gotoMine" prefHeight="83.0" prefWidth="146.0" text="Gå til mine" />
    </children>
 </AnchorPane>
