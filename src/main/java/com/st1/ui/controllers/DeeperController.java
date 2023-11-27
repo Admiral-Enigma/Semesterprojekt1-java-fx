@@ -8,7 +8,7 @@ public class DeeperController extends ViewController {
     public Label title;
 
     public void gotoSurface(ActionEvent actionEvent) {
-        Game.context.transition("mine");
+        Game.context.transition("surface");
 
     }
 }
