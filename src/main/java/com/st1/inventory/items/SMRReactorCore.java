@@ -33,4 +33,8 @@ public class SMRReactorCore extends BaseItem implements Item, PlaceableItem {
         System.out.println("Reaktor-kernen passede perfekt ind i beholderen, nu sker der noget.");
         Game.newReactorState.reactorCorePlaced = true;
     }
+    @Override
+    public String getImagePath() {
+        return "reactor.png";
+    }
 }
