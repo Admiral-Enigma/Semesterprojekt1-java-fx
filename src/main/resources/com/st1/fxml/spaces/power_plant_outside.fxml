@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="610.0" maxWidth="1180.0" prefHeight="610" prefWidth="1180" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.PowerPlantOutsideController">
+<AnchorPane maxHeight="610.0" maxWidth="1180.0" prefHeight="610" prefWidth="1180" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.PowerPlantOutsideController">
    <children>
       <Label fx:id="title" layoutX="142.0" layoutY="96.0" text="Power plant outside" />
       <Button layoutX="142.0" layoutY="180.0" mnemonicParsing="false" onAction="#gotoStart" prefHeight="83.0" prefWidth="146.0" text="Gå til start" />
