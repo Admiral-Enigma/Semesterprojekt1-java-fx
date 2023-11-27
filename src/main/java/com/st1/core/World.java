@@ -59,7 +59,7 @@ public class World {
     deep_thorium.addEdge("surface", thorium_mine);
     thorium_mine.addItem(new Hakke());
 
-    deep_thorium.setGameScene(new GameScene("fxml/spaces/DeepInTheMine.fxml", sceneManager));
+    deep_thorium.setGameScene(new GameScene("fxml/spaces/deep_in_the_mine.fxml", sceneManager));
 
     airstrip.setNpc(new AirstripWoman());
     airstrip.addEdge("fly_east", fukushima);
