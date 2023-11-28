@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="610.0" maxWidth="1180.0" prefHeight="610" prefWidth="1180" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.PripyatController">
+
+    <Label fx:id="title" layoutX="24.0" layoutY="28.0" text="Fukushima" />
+    <Button layoutX="501.0" layoutY="37.0" mnemonicParsing="false" onAction="#gotoAirstrip" prefHeight="83.0" prefWidth="177.0" text="Gå til Airstrip" />
+
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="490.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
+
+</AnchorPane>

@@ -75,9 +75,13 @@ public class World {
     fukushima.addItem(new SMRContainment());
     fukushima.setNpc(fukushimaMan);
 
+    fukushima.setGameScene(new GameScene("fxml/spaces/fukushima.fxml", sceneManager));
+
     pripyat.addEdge("fly_back", airstrip);
     pripyat.addItem(new SMRTurbine());
     pripyat.setNpc(pripyatMan);
+
+    pripyat.setGameScene(new GameScene("fxml/spaces/pripyat.fxml", sceneManager));
 
 
     power_plant_lobby.addEdge("power_plant_boiler", power_plant_boiler);
