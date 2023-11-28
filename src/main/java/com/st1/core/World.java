@@ -68,6 +68,8 @@ public class World {
     airstrip.addEdge("fly_west", pripyat);
     airstrip.addEdge("power_plant_outside", power_plant_outside);
     airstrip.addEdge("mine", thorium_mine);
+    airstrip.setGameScene(new GameScene("fxml/spaces/airstrip.fxml", sceneManager));
+
 
     fukushima.addEdge("fly_back", airstrip);
     fukushima.addItem(new SMRContainment());
