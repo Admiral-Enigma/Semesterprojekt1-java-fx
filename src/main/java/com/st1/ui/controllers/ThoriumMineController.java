@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 public class ThoriumMineController extends ViewController {
 
     public void gotoRoad(ActionEvent actionEvent) {
-        Game.context.transition("road");
+        Game.context.transition("power_plant_outside");
     }
     public void gotoAirstrip(ActionEvent actionEvent) {
         Game.context.transition("airstrip");

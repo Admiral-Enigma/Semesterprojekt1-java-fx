@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="610" prefWidth="1180" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.PowerPlantLobbyController">
     <children>
-        <ImageView fitHeight="702.0" fitWidth="1221.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="700" fitWidth="1180" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="https://cdna.artstation.com/p/marketplace/presentation_assets/000/442/056/large/file.jpg?1594348859" />
             </image>
