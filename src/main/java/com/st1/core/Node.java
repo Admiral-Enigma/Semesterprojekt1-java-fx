@@ -16,8 +16,8 @@ public class Node {
     return name;
   }
   
-  public Node addEdge (String name, Node node) {
-    edges.put(name, node);
+  public Node addEdge (Direction direction, Node node) {
+    edges.put(direction.getName(), node);
     return this;
   }
   

@@ -14,6 +14,6 @@ public class CommandGo extends BaseCommand implements Command {
       System.out.println("I don't seem to know where that is 🤔");
       return;
     }
-    context.transition(parameters[0]);
+    //context.transition(parameters[0]);
   }
 }

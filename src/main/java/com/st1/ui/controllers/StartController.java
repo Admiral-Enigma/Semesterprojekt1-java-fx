@@ -4,6 +4,7 @@ import com.st1.Game;
 import com.st1.inventory.items.Hakke;
 import com.st1.inventory.items.McFeast;
 import com.st1.ui.components.ItemDrop;
+import com.st1.core.Direction;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.VBox;
@@ -16,7 +17,7 @@ public class StartController extends ViewController implements Initializable {
     public VBox hakke;
 
     public void siuu(ActionEvent actionEvent) {
-        Game.context.transition("road");
+        Game.context.transition(Direction.power_plant_outside);
 
         Game.textPrinter.printText("SIUUUUU");
     }
@@ -32,3 +33,4 @@ public class StartController extends ViewController implements Initializable {
         new ItemDrop(hakke, pickaxe);
     }
 }
+

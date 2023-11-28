@@ -21,11 +21,11 @@ public class Context  {
     return current;
   }
   
-  public void transition (String direction) {
-    Space next = (Space) current.followEdge(direction);
+  public void transition (Direction direction) {
+    Space next = (Space) current.followEdge(direction.getName());
 
     if (next==null) {
-      throw new RuntimeException("Unknown directon " + direction);
+      throw new RuntimeException("Unknown directon " + direction.getName());
     }
 
     current.goodbye();
