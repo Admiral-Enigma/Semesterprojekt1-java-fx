@@ -15,7 +15,7 @@ public enum Direction {
     private final String name;
 
 
-     Direction (String name) {
+    Direction (String name) {
         this.name = name;
     }
 
