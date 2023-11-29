@@ -25,14 +25,14 @@ public class SMRCoolantCirculation extends BaseItem implements Item, PlaceableIt
 
     @Override
     public void place(Context context) {
-        if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.reactorVesselPlaced != true) {
+        if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.isReactorVesselPlaced()) {
             System.out.println("Nedkølingsvæsken passer ikke her. Mangler der noget, eller er du i det rigtige rum?");
             return;
         }
 
         this.destroy();
         System.out.println("Her kan Nedkølingsvæsken virkelig bruges! Godt arbejde!");
-        Game.newReactorState.coolantCirculationPlaced = true;
+        Game.newReactorState.setCoolantCirculationPlaced(true);
 
     }
     @Override
