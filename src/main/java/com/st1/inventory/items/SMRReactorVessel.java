@@ -26,14 +26,14 @@ public class SMRReactorVessel extends BaseItem implements Item, PlaceableItem {
 
     @Override
     public void place(Context context) {
-        if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.containmentVesselPlaced != true) {
+        if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.isContainmentVesselPlaced()) {
             System.out.println("Du kan ikke placere beholderen her!");
             return;
         }
 
         this.destroy();
         System.out.println("Reaktorbeholderen passer perfekt ind her. Nu mangler vi kun resten af delene! Godt arbejde");
-        Game.newReactorState.reactorVesselPlaced = true;
+        Game.newReactorState.setReactorVesselPlaced(true);
     }
     @Override
     public String getImagePath() {
