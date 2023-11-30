@@ -4,8 +4,8 @@ import com.st1.core.Context;
 import com.st1.inventory.BaseItem;
 import com.st1.inventory.UsableItem;
 
-public class Kulkraftværkskedel extends BaseItem implements UsableItem {
-    public Kulkraftværkskedel() {
+public class Coalkettle extends BaseItem implements UsableItem {
+    public Coalkettle() {
         super("Kulkraftværkskedel", "Kulkraftværkskedel");
     }
 
@@ -25,5 +25,10 @@ public class Kulkraftværkskedel extends BaseItem implements UsableItem {
 
         System.out.println("Væk med den.");
         this.destroy();
+    }
+
+    @Override
+    public String getImagePath() {
+        return "coalkettle.png";
     }
 }
