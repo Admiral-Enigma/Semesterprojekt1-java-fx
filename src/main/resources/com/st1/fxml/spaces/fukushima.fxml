@@ -10,5 +10,6 @@
     <Button layoutX="501.0" layoutY="37.0" mnemonicParsing="false" onAction="#gotoAirstrip" prefHeight="83.0" prefWidth="177.0" text="Gå til Airstrip" />
 
     <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="490.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
+    <VBox fx:id="reactorVesselItem" layoutX="331.0" layoutY="96.0" prefHeight="73.0" prefWidth="100.0" />
 
 </AnchorPane>
