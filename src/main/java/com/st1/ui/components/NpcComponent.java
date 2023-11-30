@@ -29,10 +29,6 @@ public class NpcComponent {
 
         root.widthProperty().addListener(e -> {
             parentWidth = root.getWidth();
-
-            if (parentWidth == 0) {
-                this.render();
-            }
         });
     }
 
