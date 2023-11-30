@@ -5,5 +5,5 @@
 
 <AnchorPane prefHeight="610" prefWidth="1180" style="-fx-background-color: #e5e7eb" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.DeeperController">
     <Button layoutX="1055.0" layoutY="196.0" mnemonicParsing="false" onAction="#gotoSurface" text="Gå til overfalde" />
-
+    <VBox layoutX="192.0" fx:id="hakke" layoutY="402.0" prefHeight="80.0" prefWidth="80.0" />
 </AnchorPane>
