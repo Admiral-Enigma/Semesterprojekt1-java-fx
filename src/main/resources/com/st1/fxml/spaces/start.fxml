@@ -4,10 +4,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="610" prefWidth="1180" style="-fx-background-color: #e5e7eb" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.StartController">
-    <Button layoutX="1055.0" layoutY="196.0" mnemonicParsing="false" onAction="#siuu" text="Gå til power plant" />
-
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefHeight="610" prefWidth="1180" style="-fx-background-color: #e5e7eb" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.StartController">
+   <Button layoutX="1055.0" layoutY="196.0" mnemonicParsing="false" onAction="#siuu" text="Gå til power plant" />
      <Label layoutX="51.0" layoutY="36.0">FIsk</Label>
-
-
+   <VBox fx:id="mcfeastItem" layoutX="331.0" layoutY="96.0" prefHeight="73.0" prefWidth="100.0" />
+   <VBox layoutX="192.0" fx:id="hakke" layoutY="402.0" prefHeight="80.0" prefWidth="80.0" />
 </AnchorPane>
