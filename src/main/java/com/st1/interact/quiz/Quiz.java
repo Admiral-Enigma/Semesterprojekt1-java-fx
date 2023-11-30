@@ -39,39 +39,22 @@ public class Quiz {
         }
     }
 
-    public boolean processAnswer(String answer) {
-        try {
-            Integer answerIndex = Integer.parseInt(answer);
-            Question currentQuestion = this.getCurrentQuestion();
+    public boolean processAnswer(int answer) {
+        Question currentQuestion = this.getCurrentQuestion();
+        if (currentQuestion.isCorrectChoice(answer)) {
+            System.out.println(currentQuestion.getCorrectAnswerMessage());
 
-            if (answerIndex < 1 || answerIndex > currentQuestion.getChoices().size()) {
-                throw new NumberFormatException();
+            // Var dette det sidste spørgsmål i quizen?
+            if (currentQuestionIndex + 1 == questions.size()) {
+                completed = true;
+            } else {
+                currentQuestionIndex++;
             }
 
-            // Nu kan vi antage at spilleren har valgt et muligt svar
-
-            // Er dette det korrekte svar?
-           if (currentQuestion.isCorrectChoice(answerIndex - 1)) {
-               System.out.println(currentQuestion.getCorrectAnswerMessage());
-
-               // Var dette det sidste spørgsmål i quizen?
-               if (currentQuestionIndex + 1 == questions.size()) {
-                   completed = true;
-               } else {
-                   // Print næste spørgsmål
-                   currentQuestionIndex++;
-                   this.renderCurrentQuestion();
-               }
-           } else {
-               System.out.println("Hmm, det var ikke det rigtige svar");
-           }
-
-        } catch (NumberFormatException e) {
-            System.out.println("Hmm, det svar forstår jeg ikke");
+            return true;
+        } else {
+            return  false;
         }
-
-        return completed;
-
     }
 
 }
