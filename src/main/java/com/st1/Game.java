@@ -9,8 +9,10 @@ import com.st1.inventory.items.McFeast;
 import com.st1.inventory.items.SMRGenerator;
 import com.st1.ui.SceneManager;
 import com.st1.util.ObservableContext;
+import com.st1.util.ObservableNewReactorState;
 import com.st1.util.TextPrinter;
 import javafx.application.Application;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 
@@ -18,7 +20,7 @@ import java.io.IOException;
 
 public class Game extends Application {
     public static GameState state = GameState.IN_CONTEXT;
-    public static NewReactorState newReactorState = new NewReactorState();
+    public static ObservableNewReactorState newReactorState = new ObservableNewReactorState();
     static World world    = new World();
     public static ObservableContext context  = new ObservableContext(world.getEntry());
 
@@ -26,6 +28,12 @@ public class Game extends Application {
 
     private Stage mainStage;
     public SceneManager sceneManager;
+
+    public void checkWinCondition(){
+        if (newReactorState.completelyBuilt()) {
+            sceneManager.transitionScene("winscene");
+        }
+    }
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -41,6 +49,8 @@ public class Game extends Application {
         sceneManager.createScene("game", "fxml/game-view.fxml");
         sceneManager.transitionScene("menu");
 
+        sceneManager.createScene("winscene", "fxml/win-scene.fxml");
+
         mainStage.setResizable(false);
         mainStage.show();
 
@@ -48,6 +58,8 @@ public class Game extends Application {
         context.inventory.add(new McChicken());
         context.inventory.add(new SMRGenerator());
         //context.getCurrent().welcome();
+
+        newReactorState.addListener(change -> checkWinCondition());
 
     }
 
