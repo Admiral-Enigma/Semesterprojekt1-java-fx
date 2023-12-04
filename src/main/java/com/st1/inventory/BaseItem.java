@@ -55,7 +55,6 @@ public class BaseItem implements Item {
         return "notfound.png";
     }
 
-
     public String getId() {
         return this.id;
     }

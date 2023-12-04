@@ -17,7 +17,11 @@ public class BaseNpc implements Npc {
 
     @Override
     public void normalSightingMessage() {
-
     }
+    @Override
+    public String getImagePath() {
+        return "notfound.png";
+    }
+
 
 }

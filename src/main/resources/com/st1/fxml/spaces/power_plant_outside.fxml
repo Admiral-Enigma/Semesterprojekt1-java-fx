@@ -18,5 +18,6 @@
       </ImageView>
       <Button layoutX="207.0" layoutY="435.0" mnemonicParsing="false" onAction="#mcFeastify" prefHeight="143.0" prefWidth="201.0" text="McFeastify" />
       <Button layoutX="69.0" layoutY="263.0" mnemonicParsing="false" onAction="#gotoMine" prefHeight="83.0" prefWidth="146.0" text="Gå til mine" />
+      <Button layoutX="517.0" layoutY="494.0" mnemonicParsing="false" onAction="#gotoAirstrip" prefHeight="83.0" prefWidth="146.0" text="Gå til airstrip" />
    </children>
 </AnchorPane>
