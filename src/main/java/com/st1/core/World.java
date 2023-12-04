@@ -34,7 +34,7 @@ public class World {
     startPoint.addEdge(Direction.power_plant_outside, power_plant_outside);
 
     startPoint.setGameScene(new GameScene("fxml/spaces/start.fxml", sceneManager));
-    startPoint.setNpc(new TestInfoMan());
+    startPoint.setNpc(new IntroMan());
     McFeast mcfeast = new McFeast();
     mcfeast.setQuantity(2432);
     startPoint.addItem(mcfeast)

@@ -2,8 +2,8 @@ package com.st1.interact;
 
 import com.st1.Game;
 
-public class TestInfoMan extends BaseNpc {
-    public TestInfoMan() {
+public class IntroMan extends BaseNpc {
+    public IntroMan() {
         super("Testman");
     }
 
