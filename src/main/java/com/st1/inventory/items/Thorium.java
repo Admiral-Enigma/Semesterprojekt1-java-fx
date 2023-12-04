@@ -26,4 +26,6 @@ public class Thorium extends BaseItem implements UsableItem {
         System.out.println("Du smider thoriumet ind i reaktoren.");
         this.destroy();
     }
+
+    public String getImagePath() {return "Thorium.png";}
 }

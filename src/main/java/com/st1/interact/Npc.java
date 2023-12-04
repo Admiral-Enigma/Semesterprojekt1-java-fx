@@ -9,5 +9,7 @@ public interface Npc {
 
     public void normalSightingMessage();
 
+    String getImagePath();
+
 
 }

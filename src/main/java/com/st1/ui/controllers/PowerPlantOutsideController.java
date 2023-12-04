@@ -18,8 +18,7 @@ public class PowerPlantOutsideController extends ViewController {
     public void goLobby(ActionEvent actionEvent) {
         Game.context.transition("power_plant_lobby");
     }
-    public void gotoAirstrip(ActionEvent actionEvent) {
-        Game.context.transition("airstrip");
+    public void gotoAirstrip(ActionEvent actionEvent) {Game.context.transition("airstrip");
     }
 
     public void mcFeastify(ActionEvent actionEvent) {

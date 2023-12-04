@@ -4,6 +4,7 @@ import com.st1.Game;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 
+
 public class ThoriumMineController extends ViewController {
 
     public void gotoRoad(ActionEvent actionEvent) {

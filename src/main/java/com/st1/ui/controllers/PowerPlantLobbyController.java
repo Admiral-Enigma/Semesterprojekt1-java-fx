@@ -4,11 +4,13 @@ import com.st1.Game;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.layout.VBox;
+
 
 public class PowerPlantLobbyController extends ViewController {
 
     public Label title;
-
+    public VBox worker;
     public void goOutside(ActionEvent actionEvent) {
         Game.context.transition("power_plant_outside");
     }
