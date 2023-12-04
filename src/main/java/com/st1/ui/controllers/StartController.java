@@ -1,9 +1,7 @@
 package com.st1.ui.controllers;
 
 import com.st1.Game;
-import com.st1.interact.TestInfoMan;
-import com.st1.interact.ThoriumMan;
-import com.st1.inventory.items.Hakke;
+import com.st1.interact.IntroMan;
 import com.st1.inventory.items.McFeast;
 import com.st1.ui.components.ItemDrop;
 import com.st1.core.Direction;
@@ -33,7 +31,7 @@ public class StartController extends ViewController implements Initializable {
 
         new ItemDrop(mcfeastItem, mcFeast);
 
-        NpcComponent npc  = new NpcComponent(infomanContainer, new TestInfoMan());
+        NpcComponent npc  = new NpcComponent(infomanContainer, new IntroMan());
 
     }
 }
