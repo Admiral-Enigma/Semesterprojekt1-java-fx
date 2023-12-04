@@ -25,13 +25,13 @@ public class SMRPressurizer extends BaseItem implements Item, PlaceableItem {
 
     @Override
     public void place(Context context) {
-        if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.containmentVesselPlaced != true) {
+        if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.isContainmentVesselPlaced()) {
             System.out.println("Du kan ikke placere pressurizeren her! Mangler der noget, eller er du i det forkerte rum?");
             return;
         }
         this.destroy();
         System.out.println("Reaktor-kernen passede perfekt ind i beholderen, nu sker der noget.");
-        Game.newReactorState.pressurizerPlaced = true;
+        Game.newReactorState.setPressurizerPlaced(true);
     }
     @Override
     public String getImagePath() {

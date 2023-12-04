@@ -1,6 +1,7 @@
 package com.st1.util;
 
 import com.st1.core.Context;
+import com.st1.core.Direction;
 import com.st1.core.Space;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
@@ -16,7 +17,7 @@ public class ObservableContext extends Context implements Observable {
         super(node);
     }
     @Override
-    public void transition (String direction) {
+    public void transition (Direction direction) {
         super.transition(direction);
         notifyObservers();
     }

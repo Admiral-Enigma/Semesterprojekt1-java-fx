@@ -32,7 +32,7 @@ public class SMRContainment extends BaseItem implements Item, PlaceableItem {
         }
         this.destroy();
         System.out.println("Indeslutningskarret er placeret, og er klar til at putte reaktordelene ind i!");
-        Game.newReactorState.containmentVesselPlaced = true;
+        Game.newReactorState.setContainmentVesselPlaced(true);
     }
     @Override
     public String getImagePath() {
