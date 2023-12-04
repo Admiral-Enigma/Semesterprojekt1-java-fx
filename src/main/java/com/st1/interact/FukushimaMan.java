@@ -10,8 +10,8 @@ public class FukushimaMan extends BaseNpc{
         }
 
         @Override
-        public void firstSightingMessage() {
-            System.out.println("Hej " + getName() + ". Velkommen til Fukushima. \nHar du en McFeast til overs?");
+        public String firstSightingMessage() {
+            return "Hej " + getName() + ". Velkommen til Fukushima. \nHar du en McFeast til overs?";
         }
 
         @Override

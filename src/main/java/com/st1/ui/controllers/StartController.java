@@ -18,6 +18,8 @@ import java.util.ResourceBundle;
 
 public class StartController extends ViewController implements Initializable {
     public VBox mcfeastItem;
+    public HBox infomanContainer;
+
     public void siuu(ActionEvent actionEvent) {
         Game.context.transition(Direction.power_plant_outside);
 
@@ -30,6 +32,9 @@ public class StartController extends ViewController implements Initializable {
         mcFeast.setQuantity(200);
 
         new ItemDrop(mcfeastItem, mcFeast);
+
+        NpcComponent npc  = new NpcComponent(infomanContainer, new TestInfoMan());
+
     }
 }
 

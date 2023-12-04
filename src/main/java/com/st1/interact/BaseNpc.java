@@ -12,7 +12,8 @@ public class BaseNpc implements Npc {
     }
 
     @Override
-    public void firstSightingMessage() {
+    public String firstSightingMessage() {
+        return "Jeg ved ikke hvad jeg skal sige";
     }
 
     @Override

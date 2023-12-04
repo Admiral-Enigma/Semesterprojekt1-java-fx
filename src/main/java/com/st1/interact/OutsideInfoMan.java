@@ -6,8 +6,8 @@ public class OutsideInfoMan extends BaseNpc {
         super("Info man");
     }
     @Override
-    public void firstSightingMessage() {
-        System.out.println(
+    public String firstSightingMessage() {
+        return
                 "Hej (name). Jeg må igen, undertrykke vores taknemmelighed for at du vil hjælpe os,  \n"
                         + "Vi i Yurigistan har en gammel nedlagt kulkraftsreaktor.\n"
                         + "Hvis du forsætter mod lobby, vil du finde to rum. \n"
@@ -23,7 +23,7 @@ public class OutsideInfoMan extends BaseNpc {
                         + "Reactor Core \n"
                         + "Containment Chamber \n"
                         + "Turbine \n"
-                        + "Thorium ");
+                        + "Thorium ";
 
     }
     @Override

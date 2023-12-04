@@ -5,7 +5,7 @@ public interface Npc {
 
     public String getName();
 
-    public void firstSightingMessage();
+    public String firstSightingMessage();
 
     public void normalSightingMessage();
 

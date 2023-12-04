@@ -10,8 +10,8 @@ public class PripyatMan extends BaseNpc {
     }
 
     @Override
-    public void firstSightingMessage() {
-        System.out.println("Hej " + getName() + ". Velkommen til Pripyat. \nHar du medbragt en McChicken?");
+    public String firstSightingMessage() {
+        return "Hej " + getName() + ". Velkommen til Pripyat. \nHar du medbragt en McChicken?";
     }
 
     @Override
