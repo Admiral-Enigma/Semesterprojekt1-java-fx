@@ -75,6 +75,6 @@ public class ThoriumMan extends BaseNpc implements HasQuiz {
         hakke.pickup(Game.context, true);
     }
 
-    public String getImagePath() {return "Worker.png";}
+    public String getImagePath() {return "mineman.png";}
 
 }
