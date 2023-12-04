@@ -8,6 +8,7 @@ import com.st1.ui.GameScene;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 
@@ -20,7 +21,7 @@ public class GameController extends ViewController implements Initializable {
     public VBox currentRoom;
 
     @FXML
-    private TilePane inventoryTilePane;
+    public HBox inventoryHbox;
 
     private InventoryComponent inventoryComponent;
     private MessagesComponent messagesComponent;
@@ -31,7 +32,7 @@ public class GameController extends ViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         renderCurrentSpace();
 
-        this.inventoryComponent = new InventoryComponent(inventoryTilePane);
+        this.inventoryComponent = new InventoryComponent(inventoryHbox);
         this.messagesComponent = new MessagesComponent(messagesTextArea);
         Game.context.addListener(observable -> renderCurrentSpace());
     }

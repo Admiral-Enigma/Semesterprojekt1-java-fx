@@ -16,8 +16,8 @@ public class ItemSlot extends Button {
     public ItemSlot(Item item) {
         this.item = item;
         ImageView imageView = new ImageView(Assets.imageFromPath("assets/" + item.getImagePath()));
-        imageView.setFitHeight(48);
-        imageView.setFitWidth(48);
+        imageView.setFitHeight(64);
+        imageView.setFitWidth(64);
         this.setStyle("-fx-background-color: #e5e7eb;");
         this.setGraphic(imageView);
         this.setOnMouseClicked(MouseEvent -> {
