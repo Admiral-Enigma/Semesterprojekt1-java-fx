@@ -21,6 +21,7 @@
                 <DropShadow blurType="GAUSSIAN" height="3.18" radius="1.0275" spread="1.0" width="2.93" />
             </effect></Label>
         <Button layoutX="22.0" layoutY="160.0" mnemonicParsing="false" onAction="#goLobby" prefHeight="83.0" prefWidth="146.0" text="Gå tilbage til Lobbyen" />
+        <VBox layoutX="192.0" fx:id="CoolantItem" layoutY="402.0" prefHeight="80.0" prefWidth="80.0" />
 
     </children>
 </AnchorPane>

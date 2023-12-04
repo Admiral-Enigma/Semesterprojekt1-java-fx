@@ -1,6 +1,7 @@
 package com.st1.ui.components;
 
 import com.st1.Game;
+import com.st1.core.GameState;
 import com.st1.inventory.Item;
 import com.st1.inventory.PlaceableItem;
 import com.st1.inventory.UsableItem;
@@ -24,6 +25,10 @@ public class ItemSlot extends Button {
                 ((UsableItem) item).use(Game.context);
             } else if (item instanceof PlaceableItem) {
                 ((PlaceableItem) item).place(Game.context);
+                // Tjek om spilleren har bygget reaktoren som det endelige
+                if (Game.newReactorState.completelyBuilt()) {
+                    Game.state = GameState.DONE;
+                }
             }
         });
     }
