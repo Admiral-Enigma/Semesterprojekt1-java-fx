@@ -58,6 +58,11 @@ public class ObservableNewReactorState extends NewReactorState implements Observ
         super.setTurbinePlaced(turbinePlaced);
         notifyObservers();
     }
+    @Override
+    public void setReactorFueled(boolean reactorFueled) {
+        super.setReactorFueled(reactorFueled);
+        notifyObservers();
+    }
 
     @Override
     public void addListener(InvalidationListener invalidationListener) {

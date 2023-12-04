@@ -14,7 +14,7 @@ public class NewReactorState {
     private boolean reactorCorePlaced = false;
     private boolean reactorVesselPlaced = false;
     private boolean turbinePlaced = false;
-
+    private boolean reactorFueled = false;
 
     public void setContainmentVesselPlaced(boolean containmentVesselPlaced) {
         this.containmentVesselPlaced = containmentVesselPlaced;
@@ -43,6 +43,7 @@ public class NewReactorState {
     public void setTurbinePlaced(boolean turbinePlaced) {
         this.turbinePlaced = turbinePlaced;
     }
+    public void setReactorFueled(boolean reactorFueled) {this.reactorFueled = reactorFueled;}
 
     public boolean isContainmentVesselPlaced() {
         return containmentVesselPlaced;
@@ -72,6 +73,8 @@ public class NewReactorState {
         return turbinePlaced;
     }
 
+    public boolean isReactorFueled() {return reactorFueled;}
+
     public NewReactorState() {
 
     }
@@ -79,6 +82,6 @@ public class NewReactorState {
     public boolean completelyBuilt() {
 
       return containmentVesselPlaced && coolantCirculationPlaced && generatorPlaced
-               && pressurizerPlaced && reactorCorePlaced && reactorVesselPlaced && turbinePlaced;
+               && pressurizerPlaced && reactorCorePlaced && reactorVesselPlaced && turbinePlaced && reactorFueled;
     }
 }
