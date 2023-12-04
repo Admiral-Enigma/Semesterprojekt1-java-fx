@@ -22,9 +22,7 @@ import java.net.URL;
 
 public class DeeperController extends ViewController implements Initializable {
     public Label title;
-    public void gotoSurface(ActionEvent actionEvent) {
-        Game.context.transition("surface");
-    }
+
     public VBox triggerNPCVbox;
     public HBox npcContainer;
     public AnchorPane root;
@@ -45,7 +43,5 @@ public class DeeperController extends ViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.thoriumQuiz = new NpcComponent(npcContainer, new ThoriumMan(), true);
-        Thorium thorium = new Thorium();
-        new ItemDrop(thoriumItem, Thorium);
     }
 }
