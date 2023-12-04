@@ -8,12 +8,10 @@ import javafx.scene.layout.*;
 
 public class InventoryComponent  {
 
-    private TilePane tilePane;
+    private HBox root;
 
-    private HBox background;
-
-    public InventoryComponent(TilePane tilePane) {
-        this.tilePane = tilePane;
+    public InventoryComponent(HBox root) {
+        this.root = root;
 
         // Listen for when the items map changes and rerender inventory UI
         Game.context.inventory.getItems().addListener((MapChangeListener<String, Item>) event -> render());
@@ -21,12 +19,10 @@ public class InventoryComponent  {
     }
 
     public void render() {
-        tilePane.getChildren().clear();
-        tilePane.setOrientation(Orientation.HORIZONTAL);
+        root.getChildren().clear();
 
-        tilePane.setPrefColumns(Game.context.inventory.getItemValues().size());
         for (Item item : Game.context.inventory.getItemValues()) {
-            tilePane
+            root
                     .getChildren()
                     .add(new ItemSlot(item));
         }
