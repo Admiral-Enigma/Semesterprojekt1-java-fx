@@ -18,7 +18,7 @@ public class Question {
     private final String correctAnswerMessage;
     private boolean done = false;
 
-    public Collection<String> getChoices() {
+    public ArrayList<String> getChoices() {
         return choices;
     }
 
