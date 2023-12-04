@@ -72,21 +72,22 @@ public class NpcComponent {
         }
 
         Image image = Assets.imageFromPath("assets/"+ npc.getImagePath());
-        double imageRatio = image.getWidth() / image.getHeight();
+        double aspectRatio = image.getWidth() / image.getHeight();
         ImageView npcManImage = new ImageView(image);
         Button npcMan = new Button();
 
         npcMan.setStyle("-fx-background-color: transparent");
 
+        // Make width 30% of the root container
+        double width = (parentWidth * 0.30);
+        npcManImage.setFitWidth(width);
 
-        npcManImage.setFitWidth((parentWidth * 0.30) * imageRatio);
-
-        // Never exceed root height when rendering the npc image
-        npcManImage.setFitHeight(Math.min(root.getHeight(), image.getHeight()));
+        // Calculate correct height so image is not stretched
+        double height = width / aspectRatio;
+        npcManImage.setFitHeight(height);
         npcMan.setGraphic(npcManImage);
         this.root.getChildren().add(npcMan);
         this.root.setSpacing(10);
-
 
 
         if (npc instanceof HasQuiz) {
