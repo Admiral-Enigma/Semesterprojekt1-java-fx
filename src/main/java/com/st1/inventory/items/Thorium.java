@@ -27,5 +27,5 @@ public class Thorium extends BaseItem implements UsableItem {
         this.destroy();
     }
 
-    public String getImagePath() {return "Thorium.png";}
+    public String getImagePath() {return "thorium.png";}
 }
