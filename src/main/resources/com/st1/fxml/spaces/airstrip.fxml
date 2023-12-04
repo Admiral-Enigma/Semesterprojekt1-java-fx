@@ -4,9 +4,10 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="610.0" maxWidth="1180.0" prefHeight="610" prefWidth="1180" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.AirstripController">
-
-    <Label fx:id="title" layoutX="24.0" layoutY="28.0" text="Airstrip" />
+<AnchorPane maxHeight="610.0" maxWidth="1200" prefHeight="610" prefWidth="1180" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.AirstripController">
+    <ImageView fitHeight="610.0" fitWidth="1200.0" pickOnBounds="true">
+        <Image url="@../../assets/airstrip.png" />
+    </ImageView>
 
     <Button layoutX="502.0" layoutY="71.0" mnemonicParsing="false" onAction="#goFukushima" prefHeight="83.0" prefWidth="177.0" text="Flyv til Fukushima" />
     <Button layoutX="63.0" layoutY="263.0" mnemonicParsing="false" onAction="#goPripyat" prefHeight="83.0" prefWidth="146.0" text="Flyv til Pripyat" />
@@ -14,6 +15,5 @@
     <Button layoutX="518.0" layoutY="263.0" mnemonicParsing="false" onAction="#goThoriumMine" prefHeight="83.0" prefWidth="146.0" text="Flyv til Thorium Mine" />
     <Button layoutX="517.0" layoutY="396.0" mnemonicParsing="false" onAction="#goStripClub" prefHeight="83.0" prefWidth="146.0" text="Tag på Strip Club" />
 
-    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="490.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
 
 </AnchorPane>
