@@ -18,7 +18,7 @@ public class PowerPlantLobbyController extends ViewController implements Initial
     public VBox containmentItem;
 
     public Label title;
-
+    public VBox worker;
     public void goOutside(ActionEvent actionEvent) {
         Game.context.transition(Direction.power_plant_outside);
     }

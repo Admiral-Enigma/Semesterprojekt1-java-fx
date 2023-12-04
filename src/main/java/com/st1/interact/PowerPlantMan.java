@@ -46,5 +46,7 @@ public class PowerPlantMan extends BaseNpc implements HasQuiz {
 
         containmentvessel.pickup(Game.context, true);
     }
+    public String getImagePath() {return "Worker.png";}
+
 
 }
