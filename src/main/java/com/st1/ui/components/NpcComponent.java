@@ -4,13 +4,17 @@ import com.st1.interact.HasQuiz;
 import com.st1.interact.Npc;
 import com.st1.interact.quiz.Question;
 import com.st1.util.Assets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+
+import java.util.ArrayList;
 
 
 public class NpcComponent {
@@ -23,6 +27,8 @@ public class NpcComponent {
 
     private double parentWidth = 0;
     private double parentHeight = 0;
+    private int messageIndex = 0;
+
 
 
     public NpcComponent(HBox root, Npc npc) {
@@ -95,6 +101,7 @@ public class NpcComponent {
         } else {
             // Show info box once again if player clicks on Npc image
             npcMan.setOnMouseClicked(e -> {
+                messageIndex = 0;
                 render();
             });
 
@@ -105,20 +112,65 @@ public class NpcComponent {
 
     private void renderMessage() {
         VBox messageContainer = new VBox();
+
+        String[] messages = npc.firstSightingMessage().split("\n");
+
         messageContainer.setSpacing(10);
         messageContainer.setPrefWidth(parentWidth*0.7);
 
-        Label message = new Label(npc.firstSightingMessage());
+        Label message = new Label(messages[messageIndex]);
         message.setStyle("-fx-background-color: white; -fx-padding: 5px; -fx-background-radius: 5px");
         message.setFont(new Font("ComicSans", 15));
         message.setWrapText(true);
 
-        Button dismissButton = new Button("Okay");
-        dismissButton.setOnMouseClicked(e -> {
-            messageContainer.getChildren().removeAll(message, dismissButton);
-        });
+        HBox buttonRow = new HBox();
+        buttonRow.setSpacing(25);
+        buttonRow.setPrefWidth(parentWidth*0.7);
 
-        messageContainer.getChildren().addAll(message, dismissButton);
+
+        if (messages.length > 1 ) {
+
+            if (messageIndex != 0) {
+                Button backButton = new Button("Tilbage");
+                backButton.setOnMouseClicked(e -> {
+                    messageIndex -= 1;
+                    this.render();
+                });
+                backButton.setMaxWidth(Double.MAX_VALUE);
+                HBox.setHgrow(backButton, javafx.scene.layout.Priority.ALWAYS);
+
+                buttonRow.getChildren().add(backButton);
+            }
+
+            if ((messageIndex + 1) != messages.length) {
+                Button nextButton = new Button("Næste");
+                nextButton.setOnMouseClicked(e -> {
+                    messageIndex += 1;
+                    this.render();
+                });
+
+                nextButton.setMaxWidth(Double.MAX_VALUE);
+                HBox.setHgrow(nextButton, javafx.scene.layout.Priority.ALWAYS);
+
+
+                buttonRow.getChildren().add(nextButton);
+            }
+
+        }
+
+        if (messages.length == 1 || (messageIndex + 1) == messages.length) {
+            Button dismissButton = new Button("Afslut");
+            dismissButton.setOnMouseClicked(e -> {
+                messageContainer.getChildren().removeAll(message, buttonRow);
+            });
+            dismissButton.setMaxWidth(Double.MAX_VALUE);
+            HBox.setHgrow(dismissButton, javafx.scene.layout.Priority.ALWAYS);
+
+            buttonRow.getChildren().add(dismissButton);
+
+        }
+
+        messageContainer.getChildren().addAll(message, buttonRow);
 
         this.root.getChildren().add(messageContainer);
     }
