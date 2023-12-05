@@ -11,11 +11,9 @@
         <Image url="@../../assets/Surface.png" />
     </ImageView>
 
-    <Button layoutX="501.0" layoutY="37.0" mnemonicParsing="false" onAction="#gotoRoad" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til power plant outside" />
-    <HBox fx:id="minemmanContainer" layoutX="80.0" layoutY="144.0" prefHeight="411.0" prefWidth="932.0">
-      <children>
-              <Button mnemonicParsing="false" onAction="#gotoDeeper" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til dybere" />
-      </children></HBox>
-        <Button layoutX="964.0" layoutY="263.0" mnemonicParsing="false" onAction="#gotoAirstrip" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til airstrip" />
+    <Button layoutX="456.0" layoutY="37.0" mnemonicParsing="false" onAction="#gotoRoad" prefHeight="54.0" prefWidth="181.0" styleClass="custombutton" text="Kraftværk" />
+    <HBox fx:id="minemmanContainer" layoutX="80.0" layoutY="144.0" prefHeight="411.0" prefWidth="932.0" />
+        <Button layoutX="500.0" layoutY="398.0" mnemonicParsing="false" onAction="#gotoDeeper" prefHeight="47.0" prefWidth="98.0" styleClass="custombutton" text="Mine" />
+        <Button layoutX="982.0" layoutY="274.0" mnemonicParsing="false" onAction="#gotoAirstrip" prefHeight="47.0" prefWidth="118.0" styleClass="custombutton" text="Airstrip" />
    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="490.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
 </AnchorPane>

@@ -10,7 +10,7 @@
       <image>
          <Image url="@../../assets/startbackdrop.jpg" />
       </image></ImageView>
-   <Button layoutX="1029.0" layoutY="196.0" mnemonicParsing="false" onAction="#gotoPowerplant" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="GÅ TIL POWER PLANT" textAlignment="CENTER">
+   <Button layoutX="1029.0" layoutY="196.0" mnemonicParsing="false" onAction="#gotoPowerplant" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Kraftværk" textAlignment="CENTER">
       <font>
          <Font size="14.0" />
       </font></Button>
