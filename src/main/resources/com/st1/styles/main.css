@@ -2,8 +2,12 @@
     -fx-background-image: url('../../st1/assets/sign.png');
     -fx-text-fill: white;
     -fx-background-color: transparent;
-    -fx-background-size: cover;
-
+    -fx-background-position: center, center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain, auto;
+    -fx-background-insets: 20;
+    -fx-font-size: x-large;
+    -fx-font-family: "JetBrains Mono"
 }
 .custombutton:hover {
     -fx-text-fill: cyan;

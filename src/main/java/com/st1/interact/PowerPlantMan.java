@@ -14,7 +14,7 @@ public class PowerPlantMan extends BaseNpc implements HasQuiz {
 
         Question question1 = new Question("Hvad står SMR for?", 0);
         question1
-                .addChoice("Små Modulære Reaktorer (Small Modular Reactor). Eller")
+                .addChoice("Små Modulære Reaktorer (Small Modular Reactor).")
                 .addChoice("Semi-automatisk Maskine Reaktor (Semi-Automatic Machine Reactor).");
 
         Question question2 = new Question("Hvor meget energi kan en SMR maksimalt producere, for at den er kvalificeret som en SMR?", 1, "Jeg er glad for, vi har dig som konsulent! Her er din beklønning!");
@@ -46,7 +46,7 @@ public class PowerPlantMan extends BaseNpc implements HasQuiz {
 
         containmentvessel.pickup(Game.context, true);
     }
-    public String getImagePath() {return "Worker.png";}
+    public String getImagePath() {return "Powerplantman.png";}
 
 
 }
