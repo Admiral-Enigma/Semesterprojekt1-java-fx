@@ -8,3 +8,10 @@
 .custombutton:hover {
     -fx-text-fill: cyan;
 }
+.itemslot {
+    -fx-background-image: url('../../st1/assets/HotBarIcon-MidJourney-NoBackground-HD.png');
+    -fx-background-color: transparent;
+    -fx-background-position: center, center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain, auto;
+}
