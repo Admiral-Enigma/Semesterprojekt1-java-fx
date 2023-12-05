@@ -35,6 +35,6 @@ public class SMRPressurizer extends BaseItem implements Item, PlaceableItem {
     }
     @Override
     public String getImagePath() {
-        return "Pressurizer.png";
+        return "Pressurizer-NoBackground.png";
     }
 }

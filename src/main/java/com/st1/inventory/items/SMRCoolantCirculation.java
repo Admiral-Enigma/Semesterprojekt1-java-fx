@@ -37,6 +37,6 @@ public class SMRCoolantCirculation extends BaseItem implements Item, PlaceableIt
     }
     @Override
     public String getImagePath() {
-        return "coolant.png";
+        return "CoolantMidJourney-NoBackground.png";
     }
 }

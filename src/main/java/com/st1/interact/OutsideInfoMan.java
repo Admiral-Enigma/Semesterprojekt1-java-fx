@@ -41,4 +41,8 @@ public class OutsideInfoMan extends BaseNpc {
                 + "Turbine \n"
                 + "Thorium ");
     }
+    @Override
+    public String getImagePath() {
+        return "Testinfoman.png";
+    }
 }
