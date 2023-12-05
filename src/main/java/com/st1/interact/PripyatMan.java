@@ -22,4 +22,9 @@ public class PripyatMan extends BaseNpc {
             System.out.println("Har du fundet en McChicken?\nNej? Jamen godt for dig");
         }
     }
+
+    @Override
+    public String getImagePath() {
+        return "Pripyat-man.png";
+    }
 }
