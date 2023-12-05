@@ -1,0 +1,10 @@
+.custombutton{
+    -fx-background-image: url('../../st1/assets/sign.png');
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-background-size: cover;
+
+}
+.custombutton:hover {
+    -fx-text-fill: cyan;
+}

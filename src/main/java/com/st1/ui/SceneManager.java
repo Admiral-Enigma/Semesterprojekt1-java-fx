@@ -1,6 +1,5 @@
 package com.st1.ui;
 
-import com.st1.Game;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -41,6 +40,8 @@ public class SceneManager {
         GameScene scene = scenes.get(name);
 
         Scene currentScene = stage.getScene();
+
+
 
         Scene newScene = currentScene == null
                 ? new Scene(scene.getRootElement())
