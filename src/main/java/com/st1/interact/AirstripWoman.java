@@ -15,8 +15,7 @@ public class AirstripWoman extends BaseNpc implements HasQuiz {
                 .addChoice("Pripyat")
                 .addChoice("Fukushima")
                 .addChoice("Power plant")
-                .addChoice("Thorium mine")
-                .addChoice("Strip club!");
+                .addChoice("Thorium mine");
 
         this.quiz = new Quiz();
         this.quiz.addQuestion(question1);
