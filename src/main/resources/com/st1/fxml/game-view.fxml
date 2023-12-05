@@ -14,7 +14,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.SubScene?>
 <?import javafx.scene.layout.HBox?>
-<VBox alignment="CENTER" prefHeight="700" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.GameController">
+<VBox stylesheets="@../styles/main.css" alignment="CENTER" prefHeight="700" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.GameController">
 
     <BorderPane>
         <center>
