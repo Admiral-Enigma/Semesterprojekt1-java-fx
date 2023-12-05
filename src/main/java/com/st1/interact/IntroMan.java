@@ -28,4 +28,9 @@ public class IntroMan extends BaseNpc {
     public void normalSightingMessage() {
         Game.textPrinter.printText("Hvad laver du her, kom ud og lav noget");
     }
+
+    @Override
+    public String getImagePath() {
+        return "introman.png";
+    }
 }

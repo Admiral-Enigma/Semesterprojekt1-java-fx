@@ -15,22 +15,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class StartController extends ViewController implements Initializable {
-    public VBox mcfeastItem;
     public HBox infomanContainer;
 
-    public void siuu(ActionEvent actionEvent) {
+    public void gotoPowerplant(ActionEvent actionEvent) {
         Game.context.transition(Direction.power_plant_outside);
-
-        Game.textPrinter.printText("SIUUUUU");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        McFeast mcFeast = new McFeast();
-        mcFeast.setQuantity(200);
-
-        new ItemDrop(mcfeastItem, mcFeast);
-
         NpcComponent npc  = new NpcComponent(infomanContainer, new IntroMan());
 
     }
