@@ -35,6 +35,6 @@ public class SMRReactorCore extends BaseItem implements Item, PlaceableItem {
     }
     @Override
     public String getImagePath() {
-        return "reactor.png";
+        return "reactor-core.png";
     }
 }

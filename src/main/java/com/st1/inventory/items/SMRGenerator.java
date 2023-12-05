@@ -36,7 +36,7 @@ public class SMRGenerator extends BaseItem implements Item, PlaceableItem {
     }
     @Override
     public String getImagePath() {
-        return "Generator.png";
+        return "generator.png";
     }
 }
 
