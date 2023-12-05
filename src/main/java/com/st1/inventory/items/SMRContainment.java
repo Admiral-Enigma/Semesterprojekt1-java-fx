@@ -36,6 +36,6 @@ public class SMRContainment extends BaseItem implements Item, PlaceableItem {
     }
     @Override
     public String getImagePath() {
-        return "ContainmentVessel-NoBackground.png";
+        return "containment.png";
     }
 }

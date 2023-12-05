@@ -2,11 +2,6 @@ package com.st1.core;/* com.st1.core.Context class to hold all context relevant 
  */
 
 import com.st1.inventory.Inventory;
-import javafx.beans.InvalidationListener;
-import javafx.beans.Observable;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Context  {
   Space current;
@@ -28,9 +23,7 @@ public class Context  {
       throw new RuntimeException("Unknown directon " + direction.getName());
     }
 
-    current.goodbye();
     current = next;
-    current.welcome();
   }
 }
 

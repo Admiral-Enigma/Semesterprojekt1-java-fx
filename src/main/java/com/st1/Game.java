@@ -57,7 +57,6 @@ public class Game extends Application {
         context.inventory.add(new McFeast());
         context.inventory.add(new McChicken());
         context.inventory.add(new SMRGenerator());
-        //context.getCurrent().welcome();
 
         newReactorState.addListener(change -> checkWinCondition());
 
