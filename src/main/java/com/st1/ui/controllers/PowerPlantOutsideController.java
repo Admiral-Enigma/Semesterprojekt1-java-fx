@@ -2,12 +2,20 @@ package com.st1.ui.controllers;
 
 import com.st1.Game;
 import com.st1.core.Direction;
+import com.st1.interact.OutsideInfoMan;
+import com.st1.ui.components.NpcComponent;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
+import javafx.scene.layout.HBox;
 
-public class PowerPlantOutsideController extends ViewController {
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class PowerPlantOutsideController extends ViewController implements Initializable {
+
+    public HBox powerPlantOutsideManContainer;
     public Label title;
 
     public void gotoStart(ActionEvent actionEvent) {
@@ -21,10 +29,8 @@ public class PowerPlantOutsideController extends ViewController {
     }
     public void gotoAirstrip(ActionEvent actionEvent) {Game.context.transition(Direction.airstrip);
     }
-
-    public void mcFeastify(ActionEvent actionEvent) {
-        title.setText("MCFEAST BBBY");
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        NpcComponent npc = new NpcComponent(powerPlantOutsideManContainer, new OutsideInfoMan());
     }
-
-
 }

@@ -2,7 +2,10 @@ package com.st1.ui.controllers;
 
 import com.st1.ui.SceneManager;
 
-public class ViewController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public abstract class ViewController {
 
     private SceneManager sceneManager;
     public void setSceneManager(SceneManager sceneManager) {
@@ -12,4 +15,5 @@ public class ViewController {
     public SceneManager getSceneManager() {
         return sceneManager;
     }
+
 }
