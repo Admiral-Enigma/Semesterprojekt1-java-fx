@@ -7,18 +7,26 @@
 
 <AnchorPane maxHeight="610.0" maxWidth="1200" prefHeight="610" prefWidth="1180" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.AirstripController">
     <ImageView fitHeight="610.0" fitWidth="1200.0" pickOnBounds="true">
-        <Image url="@../../assets/airstrip.png" />
+        <Image url="@../../assets/Airstrip.png" />
     </ImageView>
-   <VBox layoutX="587.0" layoutY="273.0" prefHeight="122.0" prefWidth="147.0">
+
+    <ImageView layoutX="331.0" layoutY="24.0" pickOnBounds="true">
+        <Image url="@../../assets/Airstrip_woman.png" />
+    </ImageView>
+
+   <VBox alignment="BOTTOM_LEFT" layoutX="508.0" layoutY="85.0" prefHeight="398.0" prefWidth="165.0" spacing="10.0">
       <children>
-         <TextFlow prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER"/>
-          <Button mnemonicParsing="false" onAction="#goPowerPlant" prefHeight="83.0" prefWidth="146.0" text="Flyv til Power Plant" />
-      
-          <Button mnemonicParsing="false" onAction="#goFukushima" prefHeight="83.0" prefWidth="177.0" text="Flyv til Fukushima" />
-          <Button mnemonicParsing="false" onAction="#goThoriumMine" prefHeight="83.0" prefWidth="146.0" text="Flyv til Thorium Mine" />
-          <Button mnemonicParsing="false" onAction="#goPripyat" prefHeight="83.0" prefWidth="146.0" text="Flyv til Pripyat" />
+         <TextFlow prefHeight="0.0" prefWidth="670.0" textAlignment="CENTER" />
+          <Button mnemonicParsing="false" onAction="#goPowerPlant" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til Power Plant" />
+          <Button mnemonicParsing="false" onAction="#goFukushima" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til Fukushima" />
+          <Button mnemonicParsing="false" onAction="#goThoriumMine" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til Thorium Mine" />
+          <Button mnemonicParsing="false" onAction="#goPripyat" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til Pripyat" />
       </children>
    </VBox>
 
+   <Label layoutX="487.0" layoutY="60.0" prefHeight="25.0" prefWidth="504.0" text="Velkommen til Airstrip! Hvor kunne du tænke dig at tage til idag?">
+      <font>
+         <Font name="System Bold Italic" size="16.0" />
+      </font></Label>
 
 </AnchorPane>
