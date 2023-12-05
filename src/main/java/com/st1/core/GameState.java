@@ -4,6 +4,4 @@ public enum GameState {
     IN_CONTEXT,
     IN_QUIZ,
     DONE,
-
-    QUIT,
 }
