@@ -19,7 +19,7 @@ public class ItemDrop {
         ImageView imageView = new ImageView(Assets.imageFromPath("assets/" + item.getImagePath()));
         imageView.setFitHeight(parent.getPrefHeight());
         imageView.setFitWidth(parent.getPrefWidth());
-        button.setStyle("-fx-background-color: #e5e7eb;");
+        button.setStyle("-fx-background-color: transparent;");
         button.setGraphic(imageView);
         button.setOnMouseClicked(MouseEvent -> {
             this.item.pickup(Game.context);
