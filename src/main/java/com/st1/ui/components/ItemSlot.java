@@ -11,14 +11,12 @@ import javafx.scene.image.ImageView;
 
 public class ItemSlot extends Button {
     private Item item;
-
-
     public ItemSlot(Item item) {
         this.item = item;
         ImageView imageView = new ImageView(Assets.imageFromPath("assets/" + item.getImagePath()));
         imageView.setFitHeight(64);
         imageView.setFitWidth(64);
-        this.setStyle("-fx-background-color: #e5e7eb;");
+        this.getStyleClass().add("itemslot");
         this.setGraphic(imageView);
         this.setOnMouseClicked(MouseEvent -> {
             if (item instanceof UsableItem) {
