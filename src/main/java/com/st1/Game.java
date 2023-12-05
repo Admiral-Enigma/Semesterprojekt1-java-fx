@@ -51,7 +51,7 @@ public class Game extends Application {
 
         sceneManager.createScene("winscene", "fxml/win-scene.fxml");
 
-       // mainStage.setResizable(false);
+        mainStage.setResizable(false);
         mainStage.show();
 
         context.inventory.add(new McFeast());
