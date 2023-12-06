@@ -5,7 +5,6 @@ import com.st1.interact.quiz.Question;
 import com.st1.interact.quiz.Quiz;
 import com.st1.inventory.items.SMRReactorCore;
 
-
 public class PripyatMan extends BaseNpc implements HasQuiz {
 
     private final Quiz quiz;
