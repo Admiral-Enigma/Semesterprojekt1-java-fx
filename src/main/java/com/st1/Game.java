@@ -3,6 +3,7 @@ package com.st1;
 import com.st1.core.GameState;
 import com.st1.core.World;
 import com.st1.inventory.items.SMRGenerator;
+import com.st1.inventory.items.SMRTurbine;
 import com.st1.ui.SceneManager;
 import com.st1.util.ObservableContext;
 import com.st1.util.ObservableNewReactorState;
