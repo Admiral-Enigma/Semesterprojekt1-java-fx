@@ -20,7 +20,13 @@ public class Thorium extends BaseItem implements UsableItem {
         super.pickup(context);
 
     }
-
+    @Override
+    public String getDescription() {
+        return """
+                Thorium bruges i reaktoren, hvor det bliver omdannet til Uran-233, for at skabe energi.
+                Thorium skal bruges efter reaktorkernen er placeret.
+                """;
+    }
    @Override
     public void use(Context context) {
         if (context.getCurrent().getName() != "Boiler Room" || !Game.newReactorState.isReactorCorePlaced()) {
@@ -29,8 +35,8 @@ public class Thorium extends BaseItem implements UsableItem {
         }
 
         this.destroy();
-        Game.textPrinter.printText("Du smider thoriummet ind i reactoren.");
-        Game.newReactorState.setReactorFueled(true);
+       Game.textPrinter.printText("Du smider thoriummet ind i reaktoren.");
+       Game.newReactorState.setReactorFueled(true);
     }
 
     public String getImagePath() {return "thorium.png";}

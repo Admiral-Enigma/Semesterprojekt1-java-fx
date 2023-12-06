@@ -23,16 +23,23 @@ public class SMRReactorVessel extends BaseItem implements Item, PlaceableItem {
         super.pickup(context);
 
     }
+    @Override
+    public String getDescription() {
+        return """ 
+                Reaktorbeholderen separerer reaktorkernen fra resten af reaktoren, så den ikke bliver ødelagt.  
+                Reaktorbeholderen skal placeres i indeslutningskarret.
+                """;
+    }
 
     @Override
     public void place(Context context) {
         if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.isContainmentVesselPlaced()) {
-            System.out.println("Du kan ikke placere beholderen her!");
+            Game.textPrinter.printText("Du kan ikke placere beholderen her!");
             return;
         }
 
         this.destroy();
-        System.out.println("Reaktorbeholderen passer perfekt ind her. Nu mangler vi kun resten af delene! Godt arbejde");
+        Game.textPrinter.printText("Reaktorbeholderen passer perfekt ind her. Nu mangler vi kun resten af delene! Godt arbejde");
         Game.newReactorState.setReactorVesselPlaced(true);
     }
     @Override

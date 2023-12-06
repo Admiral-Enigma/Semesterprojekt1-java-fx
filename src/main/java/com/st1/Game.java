@@ -1,11 +1,7 @@
 package com.st1;
 
-import com.st1.core.Context;
 import com.st1.core.GameState;
-import com.st1.core.NewReactorState;
 import com.st1.core.World;
-import com.st1.inventory.items.McChicken;
-import com.st1.inventory.items.McFeast;
 import com.st1.inventory.items.SMRGenerator;
 import com.st1.inventory.items.SMRTurbine;
 import com.st1.ui.SceneManager;
@@ -13,8 +9,6 @@ import com.st1.util.ObservableContext;
 import com.st1.util.ObservableNewReactorState;
 import com.st1.util.TextPrinter;
 import javafx.application.Application;
-import javafx.beans.value.ObservableValue;
-import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -55,8 +49,6 @@ public class Game extends Application {
         mainStage.setResizable(false);
         mainStage.show();
 
-        context.inventory.add(new McFeast());
-        context.inventory.add(new McChicken());
         context.inventory.add(new SMRGenerator());
         context.inventory.add(new SMRTurbine());
         newReactorState.addListener(change -> checkWinCondition());

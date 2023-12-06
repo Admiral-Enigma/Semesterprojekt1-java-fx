@@ -26,21 +26,7 @@ public class OutsideInfoMan extends BaseNpc {
                         + "Thorium ";
 
     }
-    @Override
-    public void normalSightingMessage() {
-        System.out.println(
-                "Bevæg dig rundt omkring i verdenen, for at finde de resourcer du skal bruge. \n"
-                + "Du skal bruge disse resourcer: \n"
-                + "Reactor Vessel \n"
-                + "Containment Chamber \n"
-                + "Coolant Circulation \n"
-                + "Steam Generator \n"
-                + "Pressuriser \n"
-                + "Reactor Core \n"
-                + "Containment Chamber \n"
-                + "Turbine \n"
-                + "Thorium ");
-    }
+
     @Override
     public String getImagePath() {
         return "Testinfoman.png";

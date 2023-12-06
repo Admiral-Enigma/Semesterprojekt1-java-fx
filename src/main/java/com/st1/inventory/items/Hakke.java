@@ -16,20 +16,26 @@ public class Hakke extends BaseItem implements UsableItem {
         return "Wow! Du har fundet en hakke! Gad vide hvad du kan bruge den til";
     }
 
-
+    @Override
+    public String getDescription() {
+        return """ 
+                Hakken bruges i minen til at skaffe Thorium.
+                Tryk på hakken i minen, for at mine.
+                """;
+    }
     @Override
     public void use(Context context) {
 
         if (context.getCurrent().getName().equals("Deep in the Mine")){
-            System.out.println("*Hak, hak* Du har fundet thorium! Husk at samle det op!");
+            Game.textPrinter.printText("Du har fundet thorium!");
             Thorium malt = new Thorium();
-            malt.setQuantity(2);
+            malt.setQuantity(1);
             malt.pickup(Game.context, true);
             this.destroy();
 
         }
         else{
-            Game.textPrinter.printText("Hvad fanden er det du laver?! Du kan sgu da ikke bruge en hakke her!");
+            Game.textPrinter.printText("Du kan ikke bruge hakken her!");
         }
     }
 

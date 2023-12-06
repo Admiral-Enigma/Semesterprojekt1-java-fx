@@ -22,15 +22,23 @@ public class SMRReactorCore extends BaseItem implements Item, PlaceableItem {
         super.pickup(context);
 
     }
+    @Override
+    public String getDescription() {
+        return """ 
+                Reaktorkernen omdanner Thorium brændstof til Uran-233, for at skabe energi,
+                men med mindre affald end en ren Uran-235 reaktor.
+                Reaktorkernen placeres i reaktorrumet, efter reaktorbeholderen.
+                """;
+    }
 
     @Override
     public void place(Context context) {
         if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.isReactorVesselPlaced()) {
-            System.out.println("Du kan ikke placere reaktor-kernen her! Mangler der noget, eller er du i det forkerte rum?");
+            Game.textPrinter.printText("Du kan ikke placere reaktor-kernen her! Mangler der noget, eller er du i det forkerte rum?");
             return;
         }
         this.destroy();
-        System.out.println("Reaktor-kernen passede perfekt ind i beholderen, nu sker der noget.");
+        Game.textPrinter.printText("Reaktor-kernen passede perfekt ind i beholderen, nu sker der noget.");
         Game.newReactorState.setReactorCorePlaced(true);
     }
     @Override

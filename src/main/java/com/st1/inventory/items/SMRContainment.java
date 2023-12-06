@@ -15,9 +15,15 @@ public class SMRContainment extends BaseItem implements Item, PlaceableItem {
     @Override
     public String getPickupMessage() {
         return "Du har fundet indeslutningskarret (containment vessel)! \n"
-                + "Dette skal sikre, at hele reaktoren er beskyttet ude- og indefra.";
+                + "Dette skal sikre, at hele reaktoren er beskyttet udefra.";
     }
-
+    @Override
+    public String getDescription() {
+        return """ 
+                Indeslutningskarret sikrer at reaktoren er beskyttet ude- og indefra.
+                Indeslutningskarret er det første der skal placeres i reaktorrummet.
+                """;
+    }
     @Override
     public void pickup(Context context) {
         super.pickup(context);
@@ -27,11 +33,11 @@ public class SMRContainment extends BaseItem implements Item, PlaceableItem {
     @Override
     public void place(Context context) {
         if (context.getCurrent().getName() != "Boiler Room") {
-            System.out.println("Indeslutningskarret er det første der skal til, for at du kan bygge resten af reaktoren!");
+            Game.textPrinter.printText("Indeslutningskarret er det første der skal til, for at du kan bygge resten af reaktoren!");
             return;
         }
         this.destroy();
-        System.out.println("Indeslutningskarret er placeret, og er klar til at putte reaktordelene ind i!");
+        Game.textPrinter.printText("Indeslutningskarret er placeret, og er klar til at putte reaktordelene ind i!");
         Game.newReactorState.setContainmentVesselPlaced(true);
     }
     @Override

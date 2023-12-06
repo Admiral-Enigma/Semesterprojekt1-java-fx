@@ -17,10 +17,10 @@
    <VBox alignment="BOTTOM_LEFT" layoutX="508.0" layoutY="85.0" prefHeight="398.0" prefWidth="165.0" spacing="10.0">
       <children>
          <TextFlow prefHeight="0.0" prefWidth="670.0" textAlignment="CENTER" />
-          <Button mnemonicParsing="false" onAction="#goPowerPlant" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til Power Plant" />
-          <Button mnemonicParsing="false" onAction="#goFukushima" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til Fukushima" />
-          <Button mnemonicParsing="false" onAction="#goThoriumMine" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til Thorium Mine" />
-          <Button mnemonicParsing="false" onAction="#goPripyat" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå til Pripyat" />
+          <Button mnemonicParsing="false" onAction="#goPowerPlant" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Power Plant" />
+          <Button mnemonicParsing="false" onAction="#goFukushima" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Fukushima" />
+          <Button mnemonicParsing="false" onAction="#goThoriumMine" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Minen" />
+          <Button mnemonicParsing="false" onAction="#goPripyat" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Pripyat" />
       </children>
    </VBox>
 
