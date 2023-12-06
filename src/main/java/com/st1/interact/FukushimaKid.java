@@ -34,10 +34,6 @@ public class FukushimaKid extends BaseNpc implements HasQuiz {
                 .addQuestion(question3);
     }
 
-    @Override
-    public void renderQuiz() {
-        this.quiz.renderCurrentQuestion();
-    }
 
     @Override
     public Quiz getQuiz() {
