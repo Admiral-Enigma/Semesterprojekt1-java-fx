@@ -22,6 +22,14 @@ public class SMRPressurizer extends BaseItem implements Item, PlaceableItem {
         super.pickup(context);
 
     }
+    @Override
+    public String getDescription() {
+        return """ 
+                Pressurizer sørger for der er det rette tryk i reaktoren, 
+                så der ikke behøves for høje temperaturer for at generere strøm.
+                Pressurizer skal placeres i reaktorrummet.
+                """;
+    }
 
     @Override
     public void place(Context context) {
