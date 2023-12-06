@@ -22,5 +22,9 @@ public class FukushimaMan extends BaseNpc{
                 System.out.println("Har du fundet den der bunke McFeasts?\nNej? den skulle gerne ligge ved start");
             }
         }
+    @Override
+    public String getImagePath() {
+        return "fukushimaman.png";
+    }
     }
 
