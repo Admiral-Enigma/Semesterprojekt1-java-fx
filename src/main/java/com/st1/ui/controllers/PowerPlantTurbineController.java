@@ -7,6 +7,7 @@ import com.st1.inventory.items.SMRCoolantCirculation;
 import com.st1.ui.components.ItemDrop;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.fxml.Initializable;
 
@@ -16,6 +17,8 @@ import java.util.ResourceBundle;
 public class PowerPlantTurbineController extends ViewController implements Initializable {
     public Label title;
     public VBox CoolantItem;
+    public ImageView generator;
+    public ImageView turbine;
 
     public void goLobby(ActionEvent actionEvent) {
         Game.context.transition(Direction.power_plant_lobby);
@@ -27,13 +30,21 @@ public class PowerPlantTurbineController extends ViewController implements Initi
         coolant.setQuantity(1);
 
         new ItemDrop(CoolantItem, coolant);
+
+        generator.setVisible(false);
+        turbine.setVisible(false);
+        updatePlacedItems();
+        Game.newReactorState.addListener(e -> updatePlacedItems());
+    }
+
+
+    public void updatePlacedItems() {
+        if (Game.newReactorState.isGeneratorPlaced()) {
+            generator.setVisible(true);
+        }
+
+        if (Game.newReactorState.isTurbinePlaced()) {
+            turbine.setVisible(true);
+        }
     }
 }
-
-
-    /*
-    public void buildTurbine(ActionEvent actionEvent) {
-
-        **INDSÆT FUNKTIONER TIL AT BYGGE TURBINE HER**
-        }
-     */
