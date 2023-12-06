@@ -26,4 +26,10 @@ public class Kulkraftværkskedel extends BaseItem implements UsableItem {
         System.out.println("Væk med den.");
         this.destroy();
     }
+
+    @Override
+    public String getImagePath() {
+        return "coal-powerplant.png";
+    }
+
 }

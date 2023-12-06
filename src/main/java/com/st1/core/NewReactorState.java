@@ -1,11 +1,7 @@
 package com.st1.core;
 
-import com.st1.Game;
 
 public class NewReactorState {
-
-
-
 
     private boolean containmentVesselPlaced = false;
     private boolean coolantCirculationPlaced = false;

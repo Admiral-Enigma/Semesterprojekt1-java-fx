@@ -90,7 +90,7 @@ public class NpcComponent {
 
         // Calculate correct height so image is not stretched
         double height = width / aspectRatio;
-        npcManImage.setFitHeight(height);
+        npcManImage.setFitHeight(Math.min(parentHeight, height));
         npcMan.setGraphic(npcManImage);
         this.root.getChildren().add(npcMan);
         this.root.setSpacing(10);
