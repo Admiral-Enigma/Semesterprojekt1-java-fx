@@ -8,7 +8,7 @@ import com.st1.inventory.PlaceableItem;
 
 public class SMRTurbine extends BaseItem implements Item, PlaceableItem {
     public SMRTurbine() {
-        super("turbine", "Turbine");
+        super("turbine", "turbine");
     }
     //Turbine gives af NPC ved Pripyat, efter dialog/quiz
     @Override
@@ -21,15 +21,21 @@ public class SMRTurbine extends BaseItem implements Item, PlaceableItem {
         super.pickup(context);
 
     }
-
+    @Override
+    public String getDescription() {
+        return """ 
+                Turbinen omdanner varme fra reaktoren til strøm, som viderefordeles til en generator.
+                Turbinen skal placeres i turbinerummet.
+                """;
+    }
     @Override
     public void place(Context context) {
         if (context.getCurrent().getName() != "Turbine Room") {
-            System.out.println("Du kan ikke placere turbinen her, prøv et andet sted!");
+            Game.textPrinter.printText("Du kan ikke placere turbinen her, prøv et andet sted!");
             return;
         }
         this.destroy();
-        System.out.println("Turbinen passer perfekt her! Godt arbejde");
+        Game.textPrinter.printText("Turbinen passer perfekt her! Godt arbejde");
         Game.newReactorState.setTurbinePlaced(true);
     }
     @Override

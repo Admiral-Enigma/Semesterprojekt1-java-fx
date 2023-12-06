@@ -19,3 +19,14 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: contain, auto;
 }
+
+/*rgb(211, 211, 211, .5);*/
+.boiler-checklist{
+    -fx-background-image: url('../assets/clipboard-nobackground.png');
+    /*-fx-background-color: rgb(255, 255, 255, .5); */
+    -fx-padding: 64px;
+    -fx-border-radius: 5px;
+    -fx-background-position: center, center;
+    -fx-background-size: contain, auto;
+    -fx-background-repeat: no-repeat;
+}

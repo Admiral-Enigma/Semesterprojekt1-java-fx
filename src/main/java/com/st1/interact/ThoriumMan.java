@@ -42,18 +42,31 @@ public class ThoriumMan extends BaseNpc implements HasQuiz {
 
         Question question1 = new Question("Hvilket brændstof er mere bæredygtigt thorium eller uran? ", 0);
         question1
-                .addChoice("Thoriumreaktorer er mere sikre og har en lavere risiko for kernekraftulykker og kernevåbenproliferation på\n grund af deres design og sværere udvinding af våbenfissilt materiale.")
+                .addChoice("Thorium er mere bæredygtigt som brændstof, da det er stort forekommende i naturen og producerer mindre langvarigt radioaktivt affald i forhold til uran.")
                 .addChoice("Uran er mere bæredygtigt som brændstof, selvom der ikke findes meget af det i naturen, da det ikke er radioaktivt. ");
 
-        Question question2 = new Question("Hvad er den primære fordel ved thoriumreaktorer i forhold til sikkerhed i sammenligning med uranreaktorer? ", 1, "rigtigt \n Her er en Hakke");
+        Question question2 = new Question("Hvad er den primære fordel ved thoriumreaktorer i forhold til sikkerhed i sammenligning med uranreaktorer? ", 1);
         question2
                 .addChoice("Thoriumreaktorer og uranreaktorer er lige sikre i forhold til risikoen for en kernekraftsulykke, men uran er mere radioaktivt end thorium.  ")
-                .addChoice("Thoriumreaktorer er mere sikre og har en lavere risiko for kernekraftulykker og kernevåbenproliferation på \ngrund af deres design og sværere udvinding af våbenfissilt materiale. ");
+                .addChoice("Thoriumreaktorer er mere sikre og har en lavere risiko for kernekraftulykker og har sværere udvinding af våbenfissilt materiale. ");
+
+        Question question3 = new Question("Hvad er halveringstiden for det thorium der er omdannet til uran? ", 0);
+        question3
+                .addChoice("160.000 år.")
+                .addChoice("14 milliarder år.");
+
+        Question question4 = new Question("Hvis du svarer rigtigt på det sidste spørgsmål får du en hakke, som du skal bruge til at mine med. Hvad kræver mest køling, for at undgå nedsmeltning? ", 1, "rigtigt \n Her er en Hakke");
+        question4
+                .addChoice("Thorium")
+                .addChoice("Uran");
+
 
         this.quiz = new Quiz();
         this.quiz
                 .addQuestion(question1)
-                .addQuestion(question2);
+                .addQuestion(question2)
+                .addQuestion(question3)
+                .addQuestion(question4);
     }
 
     @Override

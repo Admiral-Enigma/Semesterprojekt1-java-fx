@@ -14,33 +14,10 @@ public class OutsideInfoMan extends BaseNpc {
                         + "I de rum kan du placere de resourcer vi skal bruge for at omdanne reaktoren til en Small Modular Reactor. \n"
                         + "Denne reaktor vil give nogenlunde samme energi til nærområdet, hvilket sikrer at vi ikke bruger for meget eller for lidt energi. \n"
                         + "Bevæg dig rundt omkring i verdenen, for at finde de resourcer du skal bruge. \n"
-                        + "Du skal bruge disse resourcer: \n"
-                        + "Reactor Vessel \n"
-                        + "Containment Chamber \n"
-                        + "Coolant Circulation \n"
-                        + "Steam Generator \n"
-                        + "Pressuriser \n"
-                        + "Reactor Core \n"
-                        + "Containment Chamber \n"
-                        + "Turbine \n"
-                        + "Thorium ";
+                        + "Du kan gå ind i kraftværkets reaktorrum, for at se hvilke resourcer, du skal bruge:";
 
     }
-    @Override
-    public void normalSightingMessage() {
-        System.out.println(
-                "Bevæg dig rundt omkring i verdenen, for at finde de resourcer du skal bruge. \n"
-                + "Du skal bruge disse resourcer: \n"
-                + "Reactor Vessel \n"
-                + "Containment Chamber \n"
-                + "Coolant Circulation \n"
-                + "Steam Generator \n"
-                + "Pressuriser \n"
-                + "Reactor Core \n"
-                + "Containment Chamber \n"
-                + "Turbine \n"
-                + "Thorium ");
-    }
+
     @Override
     public String getImagePath() {
         return "Testinfoman.png";
