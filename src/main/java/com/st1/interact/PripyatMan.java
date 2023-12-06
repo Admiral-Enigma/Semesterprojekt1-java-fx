@@ -40,6 +40,16 @@ public class PripyatMan extends BaseNpc implements HasQuiz {
     }
 
     @Override
+    public void renderQuiz() {
+        this.quiz.renderCurrentQuestion();
+    }
+
+    @Override
+    public Quiz getQuiz() {
+        return quiz;
+    }
+
+    @Override
     public void onQuizComplete() {
         // Spilleren får Containment vessel ved at besvare quizzen rigtigt.
         SMRReactorCore reactorCore = new SMRReactorCore();
