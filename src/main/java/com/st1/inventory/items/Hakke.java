@@ -8,7 +8,7 @@ import com.st1.inventory.UsableItem;
 
 public class Hakke extends BaseItem implements UsableItem {
     public Hakke() {
-        super("hakke", "Hakke");
+        super("hakke", "hakke");
     }
 
     @Override

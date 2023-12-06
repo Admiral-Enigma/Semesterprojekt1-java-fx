@@ -6,7 +6,7 @@ import com.st1.inventory.BaseItem;
 
 public class CoalPowerPlant extends BaseItem {
     public CoalPowerPlant() {
-        super("Kulkraftværkskedel", "Kulkraftværkskedel");
+        super("Kulkraftværkskedel", "kulkraftværkskedel");
     }
 
     @Override

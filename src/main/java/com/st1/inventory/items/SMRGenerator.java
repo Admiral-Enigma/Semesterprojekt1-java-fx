@@ -8,7 +8,7 @@ import com.st1.inventory.PlaceableItem;
 
 public class SMRGenerator extends BaseItem implements Item, PlaceableItem {
     public SMRGenerator() {
-        super("generator", "Generator");
+        super("generator", "generator");
     }
     //Generator findes på jorden ved lobbyen i Yurigistan
     @Override
@@ -36,7 +36,7 @@ public class SMRGenerator extends BaseItem implements Item, PlaceableItem {
         }
 
         this.destroy();
-        Game.textPrinter.printText("Generatoren passer perfekt her, godt arbejde!");
+        Game.textPrinter.printText("Generatoren passer perfekt, godt arbejde!");
         Game.newReactorState.setGeneratorPlaced(true);
     }
     @Override

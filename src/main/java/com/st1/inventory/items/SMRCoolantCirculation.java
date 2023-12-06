@@ -8,7 +8,7 @@ import com.st1.inventory.PlaceableItem;
 
 public class SMRCoolantCirculation extends BaseItem implements Item, PlaceableItem {
     public SMRCoolantCirculation() {
-        super("coolant", "Coolant Circulation for SMR");
+        super("coolant", "nedkølingsvæske");
     }
     //Coolant Circulation fås i forbindelse med dialog.
     @Override
@@ -26,19 +26,20 @@ public class SMRCoolantCirculation extends BaseItem implements Item, PlaceableIt
     public String getDescription() {
         return """ 
                 Nedkølingsvæsken flyder rundt i reaktorbeholderen og sørger for den ikke overopheder.
-                Nedkølingsvæsken kan først placeres, når Reaktorbeholderen er på plads.
+                Nedkølingsvæsken kan først placeres, når reaktorbeholderen er på plads.
                 """;
     }
 
     @Override
     public void place(Context context) {
-        if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.isReactorVesselPlaced()) {
-            Game.textPrinter.printText("Nedkølingsvæsken passer ikke her. Mangler der noget, eller er du i det rigtige rum?");
+        boolean check = (context.getCurrent().getName() == "Boiler Room" && Game.newReactorState.isReactorVesselPlaced());
+        if (!check) {
+            Game.textPrinter.printText("Nedkølingsvæsken passer ikke her. mangler der noget, eller er du i det rigtige rum?");
             return;
         }
 
         this.destroy();
-        Game.textPrinter.printText("Her kan Nedkølingsvæsken virkelig bruges! Godt arbejde!");
+        Game.textPrinter.printText("Her kan nedkølingsvæsken virkelig bruges! Godt arbejde!");
         Game.newReactorState.setCoolantCirculationPlaced(true);
 
     }
