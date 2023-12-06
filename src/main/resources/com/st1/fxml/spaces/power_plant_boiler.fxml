@@ -31,14 +31,14 @@
          <image>
             <Image url="@../../assets/pressurizer.png" />
          </image></ImageView>
-      <VBox alignment="TOP_RIGHT" layoutX="897.0" prefHeight="336.0" prefWidth="303.0" styleClass="boiler-checklist">
+      <VBox alignment="TOP_RIGHT" layoutX="814.0" layoutY="93.0" prefHeight="289.0" prefWidth="230.0" styleClass="boiler-checklist">
          <children>
-            <Text fx:id="checklistTitle" fill="WHITE" stroke="BLACK" text="Reaktor checkliste" wrappingWidth="264.6572265625">
+            <Text fx:id="checklistTitle" fill="WHITE" stroke="BLACK" text="Reaktor checkliste" textAlignment="RIGHT" wrappingWidth="233.6572265625">
                <font>
-                  <Font name="System Bold" size="29.0" />
+                  <Font name="System Bold" size="26.0" />
                </font>
             </Text>
-            <Separator prefWidth="200.0" />
+            <Separator prefHeight="5.0" prefWidth="189.0" />
             <Text fx:id="coalPowerPlantChecklistItem" fill="red" layoutX="62.0" layoutY="78.0" text="Kulkraftværk fjernet ❌">
                <font>
                   <Font name="System Bold" size="24" />
@@ -46,42 +46,42 @@
             </Text>
             <Text fx:id="containmentChecklistItem" fill="red" layoutX="10.0" layoutY="38.0" text="Indeslutningskarret ❌">
                <font>
-                  <Font name="System Bold" size="24" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Text>
             <Text fx:id="generatorChecklistItem" fill="red" layoutX="53.0" layoutY="78.0" text="Generator ❌">
                <font>
-                  <Font name="System Bold" size="24" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Text>
             <Text fx:id="reactorVesselChecklistItem" fill="RED" layoutX="10.0" layoutY="71.0" text="Reaktorbeholder ❌" textAlignment="RIGHT">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Text>
             <Text fx:id="reactorCoreChecklistItem" fill="RED" layoutX="10.0" layoutY="110.0" text="Reaktor-kernen ❌" textAlignment="RIGHT">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Text>
             <Text fx:id="pressurizerChecklistItem" fill="RED" layoutX="10.0" layoutY="174.0" text="Ekspansionsbeholder❌" textAlignment="RIGHT">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Text>
             <Text fx:id="turbineChecklistItem" fill="RED" layoutX="106.0" layoutY="145.0" text="Turbine ❌" textAlignment="RIGHT">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Text>
             <Text fx:id="coolantChecklistItem" fill="RED" layoutX="195.0" layoutY="177.0" text="Kølesvæske ❌" textAlignment="RIGHT">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Text>
             <Text fx:id="thoriumChecklistItem" fill="RED" layoutX="10.0" layoutY="142.0" text="Thorium ❌" textAlignment="RIGHT">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="System Bold" size="22.0" />
                </font>
             </Text>
          </children>
