@@ -29,13 +29,8 @@ public class PowerPlantMan extends BaseNpc implements HasQuiz {
     }
 
     @Override
-    public void renderQuiz() {
-        this.quiz.renderCurrentQuestion();
-    }
-
-    @Override
     public Quiz getQuiz() {
-        return quiz;
+        return null;
     }
 
     @Override
