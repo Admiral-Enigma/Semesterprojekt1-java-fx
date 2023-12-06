@@ -3,7 +3,9 @@ package com.st1.ui.controllers;
 import com.st1.Game;
 import com.st1.core.Direction;
 import com.st1.interact.IntroMan;
+import com.st1.interact.PripyatGirl;
 import com.st1.interact.PripyatMan;
+import com.st1.interact.PripyatGirl;
 import com.st1.inventory.items.SMRReactorCore;
 import com.st1.ui.components.ItemDrop;
 import com.st1.ui.components.NpcComponent;
@@ -23,9 +25,11 @@ public class PripyatController extends ViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         NpcComponent npc = new NpcComponent(pripyatmancontainer, new PripyatMan());
+        NpcComponent npc2 = new NpcComponent(pripyatgirlcontainer, new PripyatGirl());
 
     }
     public HBox pripyatmancontainer;
+    public HBox pripyatgirlcontainer;
 
 
 }
