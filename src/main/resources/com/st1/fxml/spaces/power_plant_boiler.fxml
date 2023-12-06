@@ -24,7 +24,7 @@
             <effect>
                 <DropShadow blurType="GAUSSIAN" height="3.18" radius="1.0275" spread="1.0" width="2.93" />
             </effect></Label>
-        <Button layoutX="22.0" layoutY="160.0" mnemonicParsing="false" onAction="#goLobby" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Gå tilbage til Lobbyen" />
+        <Button layoutX="22.0" layoutY="160.0" mnemonicParsing="false" onAction="#goLobby" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Lobby" />
         <VBox fx:id="PressurizerItem" layoutX="560.0" layoutY="530.0" prefHeight="80.0" prefWidth="80.0">
          <effect>
             <DropShadow height="80.0" radius="39.5" spread="0.27" width="80.0">

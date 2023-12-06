@@ -19,7 +19,7 @@ public class BaseItem implements Item {
     }
 
     public void pickup(Context context, boolean silent) {
-        Game.textPrinter.printText("* Player picked up " + this.getQuantity() + " "+ this.getName() + " " + this.getDescription() + " *");
+        Game.textPrinter.printText("* Du samlede op " + this.getQuantity() + " "+ this.getName() + " *");
         Game.context.inventory.add(this);
         if (!silent) {
             Game.textPrinter.printText(this.getPickupMessage());

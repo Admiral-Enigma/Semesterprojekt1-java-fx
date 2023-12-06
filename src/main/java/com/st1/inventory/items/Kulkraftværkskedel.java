@@ -1,5 +1,6 @@
 package com.st1.inventory.items;
 
+import com.st1.Game;
 import com.st1.core.Context;
 import com.st1.inventory.BaseItem;
 import com.st1.inventory.UsableItem;
@@ -23,7 +24,7 @@ public class Kulkraftværkskedel extends BaseItem implements UsableItem {
     @Override
     public void use(Context context) {
 
-        System.out.println("Væk med den.");
+        Game.textPrinter.printText("Væk med den.");
         this.destroy();
     }
 

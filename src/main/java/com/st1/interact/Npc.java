@@ -7,8 +7,6 @@ public interface Npc {
 
     public String firstSightingMessage();
 
-    public void normalSightingMessage();
-
     String getImagePath();
 
 
