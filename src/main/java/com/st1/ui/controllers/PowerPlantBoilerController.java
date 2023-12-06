@@ -2,7 +2,7 @@ package com.st1.ui.controllers;
 
 import com.st1.Game;
 import com.st1.core.Direction;
-import com.st1.inventory.items.Kulkraftværkskedel;
+import com.st1.inventory.items.CoalPowerPlant;
 import com.st1.inventory.items.SMRPressurizer;
 import com.st1.ui.components.ItemDrop;
 import javafx.event.ActionEvent;
@@ -40,7 +40,7 @@ public class PowerPlantBoilerController extends ViewController implements Initia
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        new ItemDrop(coalPlant, new Kulkraftværkskedel());
+        new ItemDrop(coalPlant, new CoalPowerPlant());
         SMRPressurizer pressurizer = new SMRPressurizer();
         pressurizer.setQuantity(1);
 
