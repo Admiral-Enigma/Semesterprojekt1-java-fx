@@ -14,13 +14,20 @@ public class SMRCoolantCirculation extends BaseItem implements Item, PlaceableIt
     @Override
     public String getPickupMessage() {
         return "Du har fundet nedkølingsvæsken til reaktoren.\n "
-                + "Den skal nedkøle reaktoren, så den producerer den rigtige mængde energi, uden at overophede, hele tiden.";
+                + "Den skal nedkøle reaktoren, så den producerer den rigtige mængde energi, uden at overophede hele tiden.";
     }
 
     @Override
     public void pickup(Context context) {
         super.pickup(context);
 
+    }
+    @Override
+    public String getDescription() {
+        return """ 
+                Nedkølingsvæsken flyder rundt i reaktorbeholderen og sørger for den ikke overopheder.
+                Nedkølingsvæsken kan først placeres, når Reaktorbeholderen er på plads.
+                """;
     }
 
     @Override

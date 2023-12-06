@@ -21,7 +21,13 @@ public class SMRTurbine extends BaseItem implements Item, PlaceableItem {
         super.pickup(context);
 
     }
-
+    @Override
+    public String getDescription() {
+        return """ 
+                Turbinen omdanner varme fra reaktoren til strøm, som viderefordeles til en generator.
+                Turbinen skal placeres i turbinerummet.
+                """;
+    }
     @Override
     public void place(Context context) {
         if (context.getCurrent().getName() != "Turbine Room") {

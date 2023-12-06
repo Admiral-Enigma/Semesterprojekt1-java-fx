@@ -21,8 +21,13 @@ public class SMRGenerator extends BaseItem implements Item, PlaceableItem {
         super.pickup(context);
 
     }
-
-
+    @Override
+    public String getDescription() {
+        return """ 
+                Generatoren fordeler strøm fra reaktoren og ud til elnetværket.
+                Generatoren skal placeres i turbinerummet.
+                """;
+    }
     @Override
     public void place(Context context) {
         if (context.getCurrent().getName() != "Turbine Room") {

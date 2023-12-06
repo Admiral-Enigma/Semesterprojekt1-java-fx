@@ -37,7 +37,7 @@ public class BaseItem implements Item {
     }
 
     public String getDescription() {
-       return this.name + " has no description";
+       return this.name + "has no description";
     }
 
     @Override

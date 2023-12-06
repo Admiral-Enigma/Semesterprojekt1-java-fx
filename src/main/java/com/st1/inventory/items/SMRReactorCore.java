@@ -22,6 +22,14 @@ public class SMRReactorCore extends BaseItem implements Item, PlaceableItem {
         super.pickup(context);
 
     }
+    @Override
+    public String getDescription() {
+        return """ 
+                Reaktorkernen omdanner Thorium brændstof til Uran-233, for at skabe energi,
+                men med mindre affald end en ren Uran-235 reaktor.
+                Reaktorkernen placeres i reaktorrumet, efter reaktorbeholderen.
+                """;
+    }
 
     @Override
     public void place(Context context) {
