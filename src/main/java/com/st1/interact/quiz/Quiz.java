@@ -27,18 +27,6 @@ public class Quiz {
         return this.questions.get(currentQuestionIndex);
     }
 
-
-    public void renderCurrentQuestion() {
-        Question question = getCurrentQuestion();
-
-        System.out.println("Sprøgsmål: " + question.getQuestion());
-        Collection<String> choices = question.getChoices();
-
-        for (int i = 0; i < choices.size(); i++){
-            System.out.println(i + 1 + ". " + choices.toArray()[i]);
-        }
-    }
-
     public boolean processAnswer(int answer) {
         Question currentQuestion = this.getCurrentQuestion();
         if (currentQuestion.isCorrectChoice(answer)) {
