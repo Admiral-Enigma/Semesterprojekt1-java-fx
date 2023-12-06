@@ -19,6 +19,7 @@ public class ItemDrop {
         ImageView imageView = new ImageView(Assets.imageFromPath("assets/" + item.getImagePath()));
         imageView.setFitHeight(parent.getPrefHeight());
         imageView.setFitWidth(parent.getPrefWidth());
+        imageView.setPreserveRatio(true);
         button.setStyle("-fx-background-color: transparent;");
         button.setGraphic(imageView);
         button.setOnMouseClicked(MouseEvent -> {

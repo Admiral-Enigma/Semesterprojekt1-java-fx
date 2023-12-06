@@ -18,6 +18,7 @@ public class Kulkraftværkskedel extends BaseItem {
     @Override
     public void pickup(Context context) {
         Game.newReactorState.setOldPowerPlantRemoved(true);
+        Game.textPrinter.printText(getPickupMessage());
     }
 
     @Override
