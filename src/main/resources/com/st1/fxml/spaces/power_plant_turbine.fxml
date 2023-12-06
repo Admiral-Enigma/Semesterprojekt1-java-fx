@@ -5,7 +5,6 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
-<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="610" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.PowerPlantTurbineController">
     <children>
@@ -14,13 +13,6 @@
                 <Image url="@../../assets/power_plant_turbine.png" />
             </image>
         </ImageView>
-        <Label fx:id="title" layoutX="22.0" layoutY="14.0" text="Power plant turbine" textFill="WHITE">
-            <font>
-                <Font size="30.0" />
-            </font>
-            <effect>
-                <DropShadow blurType="GAUSSIAN" height="3.18" radius="1.0275" spread="1.0" width="2.93" />
-            </effect></Label>
         <Button layoutX="22.0" layoutY="160.0" mnemonicParsing="false" onAction="#goLobby" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Lobby" />
         <VBox fx:id="CoolantItem" layoutX="802.0" layoutY="510.0" prefHeight="80.0" prefWidth="80.0">
             <effect>
