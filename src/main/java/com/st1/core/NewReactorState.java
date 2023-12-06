@@ -12,6 +12,16 @@ public class NewReactorState {
     private boolean turbinePlaced = false;
     private boolean reactorFueled = false;
 
+    public boolean isOldPowerPlantRemoved() {
+        return oldPowerPlantRemoved;
+    }
+
+    public void setOldPowerPlantRemoved(boolean oldPowerPlantRemoved) {
+        this.oldPowerPlantRemoved = oldPowerPlantRemoved;
+    }
+
+    private boolean oldPowerPlantRemoved = false;
+
     public void setContainmentVesselPlaced(boolean containmentVesselPlaced) {
         this.containmentVesselPlaced = containmentVesselPlaced;
     }
