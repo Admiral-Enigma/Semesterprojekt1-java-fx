@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 
-<AnchorPane maxHeight="610.0" maxWidth="1200.0" prefHeight="610" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.FukushimaController">
-    <Label fx:id="title" layoutX="24.0" layoutY="28.0" text="Fukushima" />
+<AnchorPane fx:id="root" maxHeight="610.0" maxWidth="1200.0" prefHeight="610" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.FukushimaController">
     <ImageView disable="true" fitHeight="610" fitWidth="1200" pickOnBounds="true">
         <Image url="@../../assets/Fukushima.png" />
     </ImageView>
     <Button layoutX="501.0" layoutY="37.0" mnemonicParsing="false" onAction="#gotoAirstrip" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Airstrip" />
 
     <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="490.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
-    <VBox fx:id="reactorVesselItem" layoutX="740.0" layoutY="482.0" prefHeight="73.0" prefWidth="100.0" />
-    <HBox fx:id="fukushimamancontainer" layoutX="80.0" layoutY="144.0" prefHeight="411.0" prefWidth="600.0" />
+    <VBox fx:id="reactorVesselItem" layoutX="350.0" layoutY="492.0" prefHeight="73.0" prefWidth="100.0" />
+    <HBox fx:id="fukushimamancontainer" layoutX="563.0" layoutY="163.0" prefHeight="348.0" prefWidth="383.0" />
+
+    <HBox fx:id="npcContainer" layoutX="71.0" layoutY="115.0" prefHeight="199.0" prefWidth="359.0" />
+    <VBox fx:id="triggerNPCVbox" layoutX="171.0" layoutY="456.0" onMouseClicked="#triggerNpc" prefHeight="109.0" prefWidth="70.0">
+        <children>
+            <ImageView fitHeight="109.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../assets/turbine.png" />
+                </image>
+                <effect>
+                    <DropShadow spread="0.31">
+                        <color>
+                            <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </ImageView>
+        </children></VBox>
+
+
+
+
 </AnchorPane>
