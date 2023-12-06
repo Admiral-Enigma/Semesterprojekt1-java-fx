@@ -5,8 +5,6 @@ import com.st1.interact.quiz.Quiz;
 public interface HasQuiz {
     Quiz quiz = new Quiz();
 
-    public void renderQuiz();
-
     public Quiz getQuiz();
 
     // Hvad skal NPC'en gøre når quizen bliver gennemført?
