@@ -10,5 +10,6 @@ public class MessagesComponent {
     public MessagesComponent(TextArea textArea) {
         this.textArea = textArea;
         Game.textPrinter.setMessageArea(textArea);
+        Game.textPrinter.printText("Velkommen til Yurigistan!");
     }
 }
