@@ -8,7 +8,7 @@ import com.st1.inventory.PlaceableItem;
 
 public class SMRTurbine extends BaseItem implements Item, PlaceableItem {
     public SMRTurbine() {
-        super("turbine", "Turbine");
+        super("turbine", "turbine");
     }
     //Turbine gives af NPC ved Pripyat, efter dialog/quiz
     @Override

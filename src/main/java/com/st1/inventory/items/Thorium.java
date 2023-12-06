@@ -7,7 +7,7 @@ import com.st1.inventory.UsableItem;
 
 public class Thorium extends BaseItem implements UsableItem {
     public Thorium() {
-        super("thorium", "Thorium");
+        super("thorium", "thorium");
     }
 
     @Override
@@ -29,7 +29,8 @@ public class Thorium extends BaseItem implements UsableItem {
     }
    @Override
     public void use(Context context) {
-        if (context.getCurrent().getName() != "Boiler Room" || !Game.newReactorState.isReactorCorePlaced()) {
+       boolean check = (context.getCurrent().getName() == "Boiler Room" && Game.newReactorState.isReactorCorePlaced());
+       if (!check) {
             Game.textPrinter.printText("Du kan ikke bruge thoriummet endnu. Mangler der noget, eller er du i det forkerte rum?");
             return;
         }

@@ -9,7 +9,7 @@ import com.st1.inventory.PlaceableItem;
 public class SMRContainment extends BaseItem implements Item, PlaceableItem {
 
     public SMRContainment() {
-        super("containment", "Containment Vessel for SMR");
+        super("containment", "indeslutningskarret");
     }
         //Containment vessel gives af NPC ved Fukushima, efter dialog/quiz
     @Override
@@ -32,12 +32,13 @@ public class SMRContainment extends BaseItem implements Item, PlaceableItem {
 
     @Override
     public void place(Context context) {
-        if (context.getCurrent().getName() != "Boiler Room") {
-            Game.textPrinter.printText("Indeslutningskarret er det første der skal til, for at du kan bygge resten af reaktoren!");
+        boolean check = (context.getCurrent().getName() == "Boiler Room" && Game.newReactorState.isOldPowerPlantRemoved());
+        if (!check) {
+            Game.textPrinter.printText("Der er ikke plads til indeslutningskarret her!");
             return;
         }
         this.destroy();
-        Game.textPrinter.printText("Indeslutningskarret er placeret, og er klar til at putte reaktordelene ind i!");
+        Game.textPrinter.printText("Indeslutningskarret er placeret, og reaktordelene kan nu sættes i!");
         Game.newReactorState.setContainmentVesselPlaced(true);
     }
     @Override
