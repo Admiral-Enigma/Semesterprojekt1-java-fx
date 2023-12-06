@@ -15,15 +15,6 @@ public class PripyatMan extends BaseNpc {
     }
 
     @Override
-    public void normalSightingMessage() {
-        if (Game.context.inventory.containsItemOfClass(McChicken.class)) {
-            System.out.println("Jamen det er jo en McChicken... ad");
-        } else {
-            System.out.println("Har du fundet en McChicken?\nNej? Jamen godt for dig");
-        }
-    }
-
-    @Override
     public String getImagePath() {
         return "Pripyat-man.png";
     }

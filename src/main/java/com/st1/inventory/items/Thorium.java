@@ -28,7 +28,7 @@ public class Thorium extends BaseItem implements UsableItem {
             return;
         }
         this.destroy();
-       Game.textPrinter.printText("Du smider thoriummet ind i reactoren.");
+       Game.textPrinter.printText("Du smider thoriummet ind i reaktoren.");
        Game.newReactorState.setReactorFueled(true);
     }
 
