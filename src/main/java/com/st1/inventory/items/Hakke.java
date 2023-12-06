@@ -16,7 +16,13 @@ public class Hakke extends BaseItem implements UsableItem {
         return "Wow! Du har fundet en hakke! Gad vide hvad du kan bruge den til";
     }
 
-
+    @Override
+    public String getDescription() {
+        return """ 
+                Hakken bruges i minen til at skaffe Thorium.
+                Tryk på hakken i minen, for at mine.
+                """;
+    }
     @Override
     public void use(Context context) {
 
