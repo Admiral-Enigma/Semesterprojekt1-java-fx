@@ -31,11 +31,11 @@ public class SMRTurbine extends BaseItem implements Item, PlaceableItem {
     @Override
     public void place(Context context) {
         if (context.getCurrent().getName() != "Turbine Room") {
-            System.out.println("Du kan ikke placere turbinen her, prøv et andet sted!");
+            Game.textPrinter.printText("Du kan ikke placere turbinen her, prøv et andet sted!");
             return;
         }
         this.destroy();
-        System.out.println("Turbinen passer perfekt her! Godt arbejde");
+        Game.textPrinter.printText("Turbinen passer perfekt her! Godt arbejde");
         Game.newReactorState.setTurbinePlaced(true);
     }
     @Override
