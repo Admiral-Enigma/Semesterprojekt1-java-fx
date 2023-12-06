@@ -19,7 +19,7 @@ public class PripyatMan extends BaseNpc implements HasQuiz {
                 .addChoice("PWR")
                 .addChoice("BWR");
 
-        Question question2 = new Question("Hvornår blev Tjernobyl-atomkraftværket først taget i brug?", 2, "Du ved meget om vores historie nu! Her er din beklønning!");
+        Question question2 = new Question("Hvornår blev Tjernobyl-atomkraftværket først taget i brug?", 2, "Du ved meget om vores historie nu! Her er din belønning!");
         question2
                 .addChoice("1965")
                 .addChoice("1979")
