@@ -36,7 +36,6 @@ public class FukushimaController extends ViewController implements Initializable
         Game.context.transition(Direction.airstrip);
     }
 
-    public HBox fukushimamancontainer;
     public VBox reactorVesselItem;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
