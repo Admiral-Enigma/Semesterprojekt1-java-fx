@@ -8,7 +8,7 @@ import com.st1.inventory.PlaceableItem;
 
 public class SMRReactorVessel extends BaseItem implements Item, PlaceableItem {
     public SMRReactorVessel() {
-        super("reactorvessel", "Reactor Vessel for SMR");
+        super("reactorvessel", "reaktorbeholder");
     }
     //reactor vessel fås i forbindelse med dialog.
     @Override
@@ -33,7 +33,8 @@ public class SMRReactorVessel extends BaseItem implements Item, PlaceableItem {
 
     @Override
     public void place(Context context) {
-        if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.isContainmentVesselPlaced()) {
+        boolean check = (context.getCurrent().getName() == "Boiler Room" && Game.newReactorState.isContainmentVesselPlaced());
+        if (!check) {
             Game.textPrinter.printText("Du kan ikke placere beholderen her!");
             return;
         }

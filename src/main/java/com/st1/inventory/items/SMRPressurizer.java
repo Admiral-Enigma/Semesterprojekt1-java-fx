@@ -8,7 +8,7 @@ import com.st1.inventory.PlaceableItem;
 
 public class SMRPressurizer extends BaseItem implements Item, PlaceableItem {
     public SMRPressurizer() {
-        super("pressurizer", "pressurizer for SMR");
+        super("pressurizer", "ekspansionsbeholder");
     }
     //pressurizer fås i forbindelse med dialog.
     @Override
@@ -33,7 +33,8 @@ public class SMRPressurizer extends BaseItem implements Item, PlaceableItem {
 
     @Override
     public void place(Context context) {
-        if (context.getCurrent().getName() != "Boiler Room" && Game.newReactorState.isContainmentVesselPlaced()) {
+        boolean check = (context.getCurrent().getName() == "Boiler Room" && Game.newReactorState.isContainmentVesselPlaced());
+        if (!check) {
             Game.textPrinter.printText("Du kan ikke placere ekspansionsbeholderen her! Mangler der noget, eller er du i det forkerte rum?");
             return;
         }
