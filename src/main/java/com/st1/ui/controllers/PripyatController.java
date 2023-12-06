@@ -20,14 +20,9 @@ public class PripyatController extends ViewController implements Initializable {
         Game.context.transition(Direction.airstrip);
     }
 
-    public VBox reactorCoreItem;
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        SMRReactorCore smrReactorCore = new SMRReactorCore();
 
-        new ItemDrop(reactorCoreItem, smrReactorCore);
         NpcComponent npc = new NpcComponent(pripyatmancontainer, new PripyatMan());
 
     }
