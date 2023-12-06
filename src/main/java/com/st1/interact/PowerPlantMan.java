@@ -30,7 +30,7 @@ public class PowerPlantMan extends BaseNpc implements HasQuiz {
 
     @Override
     public Quiz getQuiz() {
-        return null;
+        return quiz;
     }
 
     @Override
