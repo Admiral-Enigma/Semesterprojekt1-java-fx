@@ -65,6 +65,12 @@ public class ObservableNewReactorState extends NewReactorState implements Observ
     }
 
     @Override
+    public void setOldPowerPlantRemoved(boolean oldPowerPlantRemoved) {
+        super.setOldPowerPlantRemoved(oldPowerPlantRemoved);
+        notifyObservers();
+    }
+
+    @Override
     public void addListener(InvalidationListener invalidationListener) {
         listeners.add(invalidationListener);
 
