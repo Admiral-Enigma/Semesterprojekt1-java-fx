@@ -1,23 +1,55 @@
 package com.st1.interact;
 
 import com.st1.Game;
+import com.st1.interact.quiz.Question;
+import com.st1.interact.quiz.Quiz;
+import com.st1.inventory.items.SMRPressurizer;
+import com.st1.inventory.items.SMRReactorCore;
 
-public class PripyatMan extends BaseNpc {
+public class PripyatMan extends BaseNpc implements HasQuiz {
+
+    private final Quiz quiz;
 
     public PripyatMan() {
         super("PripyatMan");
+
+        Question question0 = new Question("Velkommen. Når du er klar har jeg nogle spørgsmål til dig. Svare du rigtigt har jeg en ting du kan få", 0);
+        question0
+                .addChoice("Klar!");
+
+        Question question1 = new Question("Hvilken reaktor var involveret i Tjernobyl-ulykken i 1986?", 0);
+        question1
+                .addChoice("RBMK")
+                .addChoice("SMR")
+                .addChoice("PWR")
+                .addChoice("BWR");
+
+        Question question2 = new Question("Hvornår blev Tjernobyl-atomkraftværket først taget i brug?", 2, "Du ved meget om vores historie nu! Her er din belønning!");
+        question2
+                .addChoice("1965")
+                .addChoice("1979")
+                .addChoice("1977")
+                .addChoice("1945");
+
+        this.quiz = new Quiz();
+        this.quiz
+                .addQuestion(question0)
+                .addQuestion(question1)
+                .addQuestion(question2);
+
     }
 
     @Override
-    public String firstSightingMessage() {
-        return "Hej " + getName() + ". Velkommen til Pripyat. \nPripyat var engang en blomstrende by, hjemsted for arbejderne ved Tjernobyl-kernekraftværket. Før katastrofen i 1986 havde byen et pulserende samfund med mennesker, der arbejdede i forskellige sektorer som landbrug, undervisning og industri.  \n" +
-                "Reaktor 1 ved Tjernobyl-atomkraftværket blev først taget i brug i 1977, mens den første kommercielle atomkraftreaktorer blev taget i brug fra 1954. Dog ændrede katastrofen der ramte Tjernobyl i 1986 under en sikkerhedsprøve, vores opfattelse af denne kraftfulde, men komplekse energiform. \n" +
-                "En blanding af sovjetisk stolthed og flere fejl undersikkerhedsprøver samt et personale med manglende træning og erfaring førte til en kæmpe miljømæssig katastrofe som spredte sig over et kæmpe område af Europa, hvilket var skyld i alvorlige sundhedsskader hos menneske, dyr og ikke mindst for miljøet. \n" +
-                "Efter eksplosionen på reaktor 4, der anvendte RBMK-teknologien, blev Pripyat evakueret for at minimere risikoen for radioaktivt nedfald. Evakueringen blev beordret flere dage efter katastrofen, hvilket resulterede i en pludselig forladelse af byen. Livet ændrede sig dramatisk, og området blev forladt som en spøgelsesby.\n" +
-                "Ulykken fik meget opmærksomhed og havde en betydelig indvirkning på folks syn på atomkraft, hvor mange lande valgte at revurdere deres atomkraftspolitik som førte til udfasning eller bremset udviklingen af nye atomkraftværker. \n";
+    public void onQuizComplete() {
+        // Spilleren får Containment vessel ved at besvare quizzen rigtigt.
+        SMRReactorCore reactorCore = new SMRReactorCore();
+        SMRPressurizer pressurizer = new SMRPressurizer();
+        reactorCore.setQuantity(1);
+        pressurizer.setQuantity(1);
+
+        reactorCore.pickup(Game.context, true);
+        pressurizer.pickup(Game.context, true);
     }
-
-
 
     @Override
     public String getImagePath() {
