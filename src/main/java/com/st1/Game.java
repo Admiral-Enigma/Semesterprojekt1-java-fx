@@ -48,8 +48,6 @@ public class Game extends Application {
         mainStage.setResizable(false);
         mainStage.show();
 
-        context.inventory.add(new McFeast());
-        context.inventory.add(new McChicken());
         context.inventory.add(new SMRGenerator());
 
         newReactorState.addListener(change -> checkWinCondition());

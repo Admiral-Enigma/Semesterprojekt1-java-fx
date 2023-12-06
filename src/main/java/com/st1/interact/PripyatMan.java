@@ -17,14 +17,7 @@ public class PripyatMan extends BaseNpc {
                 "Ulykken fik meget opmærksomhed og havde en betydelig indvirkning på folks syn på atomkraft, hvor mange lande valgte at revurdere deres atomkraftspolitik som førte til udfasning eller bremset udviklingen af nye atomkraftværker. \n";
     }
 
-    @Override
-    public void normalSightingMessage() {
-        if (Game.context.inventory.containsItemOfClass(McChicken.class)) {
-            System.out.println("Jamen det er jo en McChicken... ad");
-        } else {
-            System.out.println("Har du fundet en McChicken?\nNej? Jamen godt for dig");
-        }
-    }
+
 
     @Override
     public String getImagePath() {
