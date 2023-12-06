@@ -23,6 +23,13 @@ public class SMRReactorVessel extends BaseItem implements Item, PlaceableItem {
         super.pickup(context);
 
     }
+    @Override
+    public String getDescription() {
+        return """ 
+                Reaktorbeholderen separerer reaktorkernen fra resten af reaktoren, så den ikke bliver ødelagt.  
+                Reaktorbeholderen skal placeres i indeslutningskarret.
+                """;
+    }
 
     @Override
     public void place(Context context) {
