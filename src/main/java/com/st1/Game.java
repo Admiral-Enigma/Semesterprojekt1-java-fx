@@ -50,7 +50,7 @@ public class Game extends Application {
         mainStage.show();
 
         context.inventory.add(new SMRGenerator());
-
+        context.inventory.add(new SMRTurbine());
         newReactorState.addListener(change -> checkWinCondition());
 
     }
