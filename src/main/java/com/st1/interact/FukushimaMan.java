@@ -1,7 +1,6 @@
 package com.st1.interact;
 
 import com.st1.Game;
-import com.st1.inventory.items.McFeast;
 
 public class FukushimaMan extends BaseNpc{
 
