@@ -141,7 +141,7 @@ public class NpcComponent {
                 });
                 backButton.getStyleClass().add("custombutton");
                 backButton.setPrefHeight(controlButtonHeight);
-                HBox.setHgrow(backButton, javafx.scene.layout.Priority.ALWAYS);
+                backButton.setPrefWidth(controlButtonHeight * 1.5);
 
                 buttonRow.getChildren().add(backButton);
             }
@@ -155,7 +155,7 @@ public class NpcComponent {
 
                 nextButton.setPrefHeight(controlButtonHeight);
                 nextButton.getStyleClass().add("custombutton");
-                HBox.setHgrow(nextButton, javafx.scene.layout.Priority.ALWAYS);
+                nextButton.setPrefWidth(controlButtonHeight * 1.5);
 
 
                 buttonRow.getChildren().add(nextButton);
@@ -169,8 +169,9 @@ public class NpcComponent {
                 messageContainer.getChildren().removeAll(message, buttonRow);
             });
             dismissButton.getStyleClass().add("custombutton");
-            HBox.setHgrow(dismissButton, javafx.scene.layout.Priority.ALWAYS);
             dismissButton.setPrefHeight(controlButtonHeight);
+            dismissButton.setPrefWidth(controlButtonHeight * 1.5);
+
             buttonRow.getChildren().add(dismissButton);
 
         }
