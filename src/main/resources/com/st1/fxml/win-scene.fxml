@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane stylesheets="@../styles/main.css" prefHeight="700" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.WinController">
+<AnchorPane prefHeight="700" prefWidth="1200" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.WinController">
     <ImageView disable="true" fitHeight="700.0" fitWidth="1200" pickOnBounds="true">
         <image>
             <Image url="@../assets/winscreen-backdrop.png" />
@@ -15,10 +15,10 @@
         <font>
             <Font name="JetBrains Mono Regular" size="63.0" />
         </font></Text>
-    <Button styleClass="custombutton" layoutX="489.0" layoutY="491.0" mnemonicParsing="false" onAction="#onEndClick" prefHeight="71.0" prefWidth="222.0" text="Afslut spillet" />
-    <Text layoutX="469.0" layoutY="161.0" stroke="#ffffffd5" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" text="Du har reddet Yurigistan, og hjulpet dem med at opfylde FN's krav om bæredygtig energi inden 2030. Vi vil sætte pris på, hvis du gav feedback på din oplevelse med Yurigistan: Nuclear Bonanza, ved at følge linket nedenunder. Når du er færdig, så tryk på Afslut spillet." textAlignment="CENTER" wrappingWidth="262.0">
+    <Button layoutX="489.0" layoutY="491.0" mnemonicParsing="false" onAction="#onEndClick" prefHeight="71.0" prefWidth="222.0" styleClass="custombutton" text="Afslut spillet" />
+    <Text layoutX="400.0" layoutY="256.0" stroke="#ffffffd5" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" text="Du har reddet Yurigistan, og hjulpet dem med at opfylde FN's krav om bæredygtig energi inden 2030. Du kan trykke på Afslut spillet nu." textAlignment="CENTER" wrappingWidth="400.0">
       <font>
-         <Font name="JetBrains Mono SemiBold" size="18.0" />
+         <Font name="JetBrains Mono SemiBold" size="26.0" />
       </font>
 </Text>
 </AnchorPane>
