@@ -13,7 +13,7 @@ public class PripyatMan extends BaseNpc implements HasQuiz {
     public PripyatMan() {
         super("PripyatMan");
 
-        Question question0 = new Question("Velkommen. Når du er klar har jeg nogle spørgsmål til dig. Svare du rigtigt har jeg en ting du kan få", 0);
+        Question question0 = new Question("Hej! Når du er klar, så har jeg nogle spørgsmål til dig. Svarer du rigtigt, så har jeg en ting du kan få.", 0);
         question0
                 .addChoice("Klar!");
 

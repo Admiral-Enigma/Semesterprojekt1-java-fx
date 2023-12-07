@@ -4,15 +4,43 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="700" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.MenuController">
-
-     <Label fx:id="titleText" alignment="CENTER" layoutX="248.0" layoutY="248.0" text="Velkommen til Yurigistan Nuclear Bonanza!">
+<AnchorPane stylesheets="@../styles/main.css" prefHeight="700" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.MenuController">
+    <ImageView disable="true" fitHeight="700" fitWidth="1200" pickOnBounds="true">
+        <image>
+            <Image url="@../assets/Poster.png" />
+        </image>
+    </ImageView>
+     <Text layoutX="350.0" layoutY="310.0" stroke="#000000a6" strokeType="OUTSIDE" strokeWidth="2.0" text="VELKOMMEN TIL YURIGISTAN" textAlignment="CENTER" wrappingWidth="500.0">
       <font>
-         <Font size="40.0" />
-      </font></Label>
-   <Button layoutX="489.0" layoutY="350.0" mnemonicParsing="false" onAction="#onStartClick" prefHeight="71.0" prefWidth="222.0" text="Start" />
+         <Font name="Impact" size="91.0" />
+      </font>
+      <fill>
+         <LinearGradient endX="0.39336492890995267" endY="1.0" startX="0.17535545023696691" startY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color green="0.6000000238418579" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="0.95686274766922" blue="0.3529411852359772" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+      <effect>
+         <DropShadow blurType="GAUSSIAN" height="9.27" radius="4.87" spread="0.89" width="12.21">
+            <color>
+               <Color green="0.6666666865348816" blue="1.0" opacity="0.5670995712280273" />
+            </color>
+         </DropShadow>
+      </effect></Text>
+   <Button styleClass="custombutton" layoutX="489.0" layoutY="557.0" mnemonicParsing="false" onAction="#onStartClick" prefHeight="71.0" prefWidth="222.0" text="Start" />
    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="500.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../assets/flag.gif" />
