@@ -13,7 +13,7 @@ public class SMRCoolantCirculation extends BaseItem implements Item, PlaceableIt
     //Coolant Circulation fås i forbindelse med dialog.
     @Override
     public String getPickupMessage() {
-        return "Du har fundet nedkølingsvæsken til reaktoren.\n "
+        return "Du har fundet nedkølingsvæsken til reaktoren.\n"
                 + "Den skal nedkøle reaktoren, så den producerer den rigtige mængde energi, uden at overophede hele tiden.";
     }
 
