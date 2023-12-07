@@ -45,3 +45,24 @@
     -fx-background-radius: 5px;
     -fx-padding: 3px;
 }
+
+.question-option {
+    -fx-background-color: rgb(255, 255, 255);
+    -fx-padding: 15px;
+    -fx-background-radius: 5px;
+}
+
+.question-option:hover {
+    -fx-background-color: rgb(255, 255, 255, 0.93);
+}
+
+
+
+.npcmessagebox {
+    -fx-background-color: white;
+    -fx-padding: 15px;
+    -fx-background-radius: 10px;
+    -fx-border-color: rgb(100, 116, 139);
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+}

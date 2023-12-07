@@ -112,20 +112,23 @@ public class NpcComponent {
 
     private void renderMessage() {
         VBox messageContainer = new VBox();
+        double messageContainerWidth = parentWidth *0.7;
+        double controlButtonHeight = 64;
 
         String[] messages = npc.firstSightingMessage().split("\n");
 
         messageContainer.setSpacing(10);
-        messageContainer.setPrefWidth(parentWidth*0.7);
+        messageContainer.setPrefWidth(messageContainerWidth);
 
         Label message = new Label(messages[messageIndex]);
-        message.setStyle("-fx-background-color: white; -fx-padding: 5px; -fx-background-radius: 5px");
-        message.setFont(new Font("ComicSans", 15));
+        message.setPrefWidth(messageContainerWidth);
+        message.getStyleClass().add("npcmessagebox");
+        message.setFont(new Font("JetBrains Mono", 15));
         message.setWrapText(true);
 
         HBox buttonRow = new HBox();
         buttonRow.setSpacing(25);
-        buttonRow.setPrefWidth(parentWidth*0.7);
+        buttonRow.setPrefWidth(messageContainerWidth);
 
 
         if (messages.length > 1 ) {
@@ -136,7 +139,8 @@ public class NpcComponent {
                     messageIndex -= 1;
                     this.render();
                 });
-                backButton.setMaxWidth(Double.MAX_VALUE);
+                backButton.getStyleClass().add("custombutton");
+                backButton.setPrefHeight(controlButtonHeight);
                 HBox.setHgrow(backButton, javafx.scene.layout.Priority.ALWAYS);
 
                 buttonRow.getChildren().add(backButton);
@@ -149,7 +153,8 @@ public class NpcComponent {
                     this.render();
                 });
 
-                nextButton.setMaxWidth(Double.MAX_VALUE);
+                nextButton.setPrefHeight(controlButtonHeight);
+                nextButton.getStyleClass().add("custombutton");
                 HBox.setHgrow(nextButton, javafx.scene.layout.Priority.ALWAYS);
 
 
@@ -163,9 +168,9 @@ public class NpcComponent {
             dismissButton.setOnMouseClicked(e -> {
                 messageContainer.getChildren().removeAll(message, buttonRow);
             });
-            dismissButton.setMaxWidth(Double.MAX_VALUE);
+            dismissButton.getStyleClass().add("custombutton");
             HBox.setHgrow(dismissButton, javafx.scene.layout.Priority.ALWAYS);
-
+            dismissButton.setPrefHeight(controlButtonHeight);
             buttonRow.getChildren().add(dismissButton);
 
         }
@@ -182,14 +187,15 @@ public class NpcComponent {
         questionContainer.setSpacing(10);
         questionContainer.setPrefWidth(parentWidth*0.7);
         Label questionText = new Label(currentQuestion.getQuestion());
-        questionText.setStyle("-fx-background-color: white; -fx-padding: 5px; -fx-background-radius: 5px");
-        questionText.setFont(new Font("ComicSans", 15));
+        questionText.getStyleClass().add("npcmessagebox");
+        questionText.setFont(new Font("JetBrains Mono", 15));
         questionText.setWrapText(true);
 
         questionContainer.getChildren().add(questionText);
 
         for (int i = 0; i < currentQuestion.getChoices().size(); i++) {
             Button choiceButton = new Button(currentQuestion.getChoices().get(i));
+            choiceButton.getStyleClass().add("question-option");
             choiceButton.setWrapText(true);
             questionContainer.getChildren().add(choiceButton);
             final int answerIndex = i;

@@ -1,5 +1,7 @@
 package com.st1.interact.quiz;
 
+import com.st1.Game;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -30,7 +32,7 @@ public class Quiz {
     public boolean processAnswer(int answer) {
         Question currentQuestion = this.getCurrentQuestion();
         if (currentQuestion.isCorrectChoice(answer)) {
-            System.out.println(currentQuestion.getCorrectAnswerMessage());
+            Game.textPrinter.printText(currentQuestion.getCorrectAnswerMessage());
 
             // Var dette det sidste spørgsmål i quizen?
             if (currentQuestionIndex + 1 == questions.size()) {
