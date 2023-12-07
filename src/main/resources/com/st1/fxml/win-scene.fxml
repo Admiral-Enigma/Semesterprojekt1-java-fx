@@ -11,7 +11,7 @@
             <Image url="@../assets/winscreen-backdrop.png" />
         </image>
     </ImageView>
-    <Text layoutX="430.0" layoutY="124.0" stroke="#ffffffd5" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" text="TILLYKKE!" textAlignment="CENTER">
+    <Text layoutX="469.0" layoutY="123.0" stroke="#ffffffd5" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="2.0" text="TILLYKKE!">
         <font>
             <Font name="JetBrains Mono Regular" size="63.0" />
         </font></Text>
