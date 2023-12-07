@@ -198,6 +198,7 @@ public class NpcComponent {
 
         for (int i = 0; i < currentQuestion.getChoices().size(); i++) {
             Button choiceButton = new Button(currentQuestion.getChoices().get(i));
+            choiceButton.getStyleClass().add("question-option");
             choiceButton.setWrapText(true);
             questionContainer.getChildren().add(choiceButton);
             final int answerIndex = i;
