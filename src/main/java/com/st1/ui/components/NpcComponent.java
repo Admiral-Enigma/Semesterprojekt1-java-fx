@@ -114,6 +114,7 @@ public class NpcComponent {
         VBox messageContainer = new VBox();
         double messageContainerWidth = parentWidth *0.7;
         double controlButtonHeight = 64;
+        double controlButtonWidth = controlButtonHeight * 1.7;
 
         String[] messages = npc.firstSightingMessage().split("\n");
 
@@ -141,7 +142,7 @@ public class NpcComponent {
                 });
                 backButton.getStyleClass().add("custombutton");
                 backButton.setPrefHeight(controlButtonHeight);
-                backButton.setPrefWidth(controlButtonHeight * 1.5);
+                backButton.setPrefWidth(controlButtonWidth);
 
                 buttonRow.getChildren().add(backButton);
             }
@@ -155,7 +156,7 @@ public class NpcComponent {
 
                 nextButton.setPrefHeight(controlButtonHeight);
                 nextButton.getStyleClass().add("custombutton");
-                nextButton.setPrefWidth(controlButtonHeight * 1.5);
+                nextButton.setPrefWidth(controlButtonWidth);
 
 
                 buttonRow.getChildren().add(nextButton);
@@ -170,7 +171,7 @@ public class NpcComponent {
             });
             dismissButton.getStyleClass().add("custombutton");
             dismissButton.setPrefHeight(controlButtonHeight);
-            dismissButton.setPrefWidth(controlButtonHeight * 1.5);
+            dismissButton.setPrefWidth(controlButtonWidth);
 
             buttonRow.getChildren().add(dismissButton);
 
