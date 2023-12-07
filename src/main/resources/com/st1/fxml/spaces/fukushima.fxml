@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 
-<AnchorPane fx:id="root" maxHeight="610.0" maxWidth="1200.0" prefHeight="610" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.FukushimaController">
+<AnchorPane fx:id="root" maxHeight="610.0" maxWidth="1200.0" prefHeight="610" prefWidth="1200" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.st1.ui.controllers.FukushimaController">
     <ImageView disable="true" fitHeight="610" fitWidth="1200" pickOnBounds="true">
         <Image url="@../../assets/Fukushima.png" />
     </ImageView>
     <Button layoutX="501.0" layoutY="37.0" mnemonicParsing="false" onAction="#gotoAirstrip" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Airstrip" />
 
     <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="490.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
-    <VBox fx:id="reactorVesselItem" layoutX="350.0" layoutY="492.0" prefHeight="73.0" prefWidth="100.0" />
-    <HBox fx:id="fukushimamancontainer" layoutX="635.0" layoutY="120.0" prefHeight="470.0" prefWidth="536.0" />
+    <HBox fx:id="fukushimamancontainer" layoutX="28.0" layoutY="139.0" prefHeight="470.0" prefWidth="536.0" />
 
-    <HBox fx:id="npcContainer" layoutX="276.0" layoutY="397.0" prefHeight="199.0" prefWidth="359.0" />
-    <VBox fx:id="triggerNPCVbox" layoutX="171.0" layoutY="456.0" onMouseClicked="#triggerNpc" prefHeight="109.0" prefWidth="70.0">
+    <HBox fx:id="npcContainer" layoutX="728.0" layoutY="257.0" prefHeight="199.0" prefWidth="359.0" />
+    <VBox fx:id="triggerNPCVbox" layoutX="863.0" layoutY="456.0" onMouseClicked="#triggerNpc" prefHeight="109.0" prefWidth="70.0">
       <children>
             <ImageView fitHeight="109.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
                 <image>
@@ -32,6 +34,14 @@
                 </effect>
             </ImageView>
       </children></VBox>
+    <VBox fx:id="reactorVesselItem" layoutX="564.0" layoutY="523.0" prefHeight="73.0" prefWidth="100.0">
+      <effect>
+         <DropShadow>
+            <color>
+               <Color red="1.0" green="1.0" blue="1.0" />
+            </color>
+         </DropShadow>
+      </effect></VBox>
 
 
 

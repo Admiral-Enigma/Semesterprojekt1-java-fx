@@ -48,12 +48,9 @@ public class PripyatMan extends BaseNpc implements HasQuiz {
     public void onQuizComplete() {
         // Spilleren får Containment vessel ved at besvare quizzen rigtigt.
         SMRReactorCore reactorCore = new SMRReactorCore();
-        SMRPressurizer pressurizer = new SMRPressurizer();
         reactorCore.setQuantity(1);
-        pressurizer.setQuantity(1);
 
         reactorCore.pickup(Game.context, true);
-        pressurizer.pickup(Game.context, true);
     }
 
     @Override
