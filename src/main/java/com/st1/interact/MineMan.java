@@ -7,8 +7,8 @@ public class MineMan extends BaseNpc {
 
         @Override
         public String firstSightingMessage() {
-            return "Hej (name). Velkommen til thorium minen. I et atomkraftværk kan der bruges både thorium og uran som brændstof." +
-                    "\nDer er 3 gange så meget thorium som der er uran, hvilket kan findes i store naturlige forekomster over hele jorden." +
+            return "Velkommen til thorium minen. I et atomkraftværk kan der bruges både thorium og uran som brændstof." +
+                    "\nDer er 3 gange så meget thorium som der er uran på kloden, hvilket kan findes i store naturlige forekomster over hele jorden." +
                     "\nThorium er et reaktivt metal, som gør det brugbart i et atomkraftværk." +
                     "\nI et atomkraftværk bliver thorium omdannet til en speciel form for uran, som derefter bruges til at producere elektricitet." +
                     "\nDet omdannede uran har en halveringstid på 160.000 år, hvilket er langt kortere end thorium, som har en halveringstid på 14 milliarder år." +

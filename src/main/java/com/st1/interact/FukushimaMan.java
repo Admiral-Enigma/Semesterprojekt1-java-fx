@@ -10,7 +10,17 @@ public class FukushimaMan extends BaseNpc{
 
         @Override
         public String firstSightingMessage() {
-            return "Hej " + getName() + ". Velkommen til Fukushima. \nFukushima ulykken d. 11. marts 2011 som var forårsaget af en kraftig tsunami \nresulterede i en chokbølge der gik verden over \nog ændrede manges syn på atomkraft som en pålidelig og sikker energikilde. \nUlykken var et resultat af flere fejl og forsømmelser i dets konstruktion, \nvedligeholdelse og manglende forberedelse på ulykken. \nPga. Dette blev miljøet og mennesker udsat for atomkraftens mere destruktive sider, \nmen det er ikke alt hvad der er til atomkraft. \nJapan ligger på 4 tektoniske plader, hvilket gør at Japan er konstant udsat for jordskælv.";
+            return "Hej! Velkommen til Fukushima." +
+                    "\nFukushima ulykken d. 11. marts 2011, som var forårsaget af en kraftig tsunami " +
+                    "\nresulterede i en chokbølge der gik verden over " +
+                    "\nog ændrede manges syn på atomkraft, som en pålidelig og sikker energikilde. " +
+                    "\nUlykken var et resultat af flere fejl og forsømmelser i dets konstruktion, " +
+                    "\nvedligeholdelse og manglende forberedelse på ulykken. " +
+                    "\nPga. dette blev miljøet og mennesker udsat for atomkraftens destruktive side, " +
+                    "\nmen det er ikke alt, hvad der er til atomkraft. " +
+                    "\nUdover at Japan blev ramt af en kraftig tsunami" +
+                    "\nså ligger Japen på 4 tektoniske plader, der gør at det er konstant udsat for jordskælv," +
+                    "\nhvilket gør det besværligere at bygge atomkræftværker der.";
         }
 
 

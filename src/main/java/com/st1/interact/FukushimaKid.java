@@ -12,15 +12,15 @@ public class FukushimaKid extends BaseNpc implements HasQuiz {
     public FukushimaKid() {
         super("Fukushima Kid");
 
-        Question question1 = new Question("Hvad skete der den d. 11. marts 2011? ", 1);
+        Question question1 = new Question("Hvad skete der d. 11. marts 2011? ", 1);
         question1
                 .addChoice("Tornado")
                 .addChoice("Tsunami");
 
-        Question question2 = new Question("Hvad kunne man havde gjort for at undgå dette/lignende ulykker for fremtidige kraftværker?", 0);
+        Question question2 = new Question("Hvad kunne man havde gjort for at undgå lignende ulykker for fremtidige kraftværker?", 0);
         question2
-                .addChoice("Kører flere sikkerhedstest og have regelmæssige tjek på konstruktionen og selve kraftværket.")
-                .addChoice("Færre reglementer så arbejderne har mindre stress. ");
+                .addChoice("Foretage flere sikkerhedstest og have regelmæssige tjek på konstruktionen og selve kraftværket.")
+                .addChoice("Færre reglementer, så arbejderne har mindre stress. ");
 
         Question question3 = new Question("Er Japan et sikkert sted at bygge atomkraft?", 0, "");
         question3
