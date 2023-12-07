@@ -4,6 +4,8 @@ import com.st1.Game;
 import com.st1.interact.quiz.Question;
 import com.st1.interact.quiz.Quiz;
 import com.st1.inventory.items.SMRContainment;
+import com.st1.inventory.items.SMRGenerator;
+import com.st1.inventory.items.SMRPressurizer;
 
 public class PowerPlantMan extends BaseNpc implements HasQuiz {
 
@@ -37,8 +39,10 @@ public class PowerPlantMan extends BaseNpc implements HasQuiz {
     public void onQuizComplete() {
         // Spilleren får Containment vessel ved at besvare quizzen rigtigt.
         SMRContainment containmentvessel = new SMRContainment();
+        SMRGenerator generator = new SMRGenerator();
+        generator.setQuantity(1);
         containmentvessel.setQuantity(1);
-
+        generator.pickup(Game.context, true);
         containmentvessel.pickup(Game.context, true);
     }
     public String getImagePath() {return "Powerplantman.png";}
