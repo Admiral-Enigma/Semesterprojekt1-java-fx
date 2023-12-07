@@ -8,7 +8,7 @@ public class OutsideInfoMan extends BaseNpc {
     @Override
     public String firstSightingMessage() {
         return
-                "Hej! Os i Yurigistan kan ikke takke dig nok for at du vil hjælpe os,  \n"
+                          "Hej. Jeg må igen udtrykke vores taknemmelighed for at du vil hjælpe os,  \n"
                         + "Vi i Yurigistan har en gammel nedlagt kulkraftsreaktor.\n"
                         + "Hvis du forsætter mod lobbyen, så vil du finde to rum. \n"
                         + "I de rum kan du placere de ressourcer vi skal bruge for at omdanne reaktoren til en atomreaktor, også kendt som small modular reactor. \n"
