@@ -55,7 +55,7 @@ public class ThoriumMan extends BaseNpc implements HasQuiz {
                 .addChoice("160.000 år.")
                 .addChoice("14 milliarder år.");
 
-        Question question4 = new Question("Hvis du svarer rigtigt på det sidste spørgsmål får du en hakke, som du skal bruge til at mine med. Hvad kræver mest køling, for at undgå nedsmeltning? ", 1, "rigtigt \n Her er en Hakke");
+        Question question4 = new Question("Hvis du svarer rigtigt på det sidste spørgsmål, så får du en hakke, som du skal bruge til at mine med. Hvad kræver mest køling, for at undgå nedsmeltning? ", 1, "rigtigt \n Her er en Hakke.");
         question4
                 .addChoice("Thorium")
                 .addChoice("Uran");

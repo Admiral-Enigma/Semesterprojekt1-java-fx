@@ -14,7 +14,7 @@ public class SMRPressurizer extends BaseItem implements Item, PlaceableItem {
     @Override
     public String getPickupMessage() {
         return "Du har fundet en ekspansionsbeholder. Denne skal sikre at nedkølingsmidlet i reaktoren ikke koger \n"
-                + "Den hører til inde i indeslutningskarret (Containment Vessel)";
+                + "Den hører til inde i indeslutningskarret.";
     }
 
     @Override
@@ -25,9 +25,9 @@ public class SMRPressurizer extends BaseItem implements Item, PlaceableItem {
     @Override
     public String getDescription() {
         return """ 
-                Pressurizer sørger for der er det rette tryk i reaktoren, 
+                Ekspansionsbeholderen sørger for der er det rette tryk i reaktoren, 
                 så der ikke behøves for høje temperaturer for at generere strøm.
-                Pressurizer skal placeres i reaktorrummet.
+                Ekspansionsbeholderen skal placeres i reaktorrummet.
                 """;
     }
 
