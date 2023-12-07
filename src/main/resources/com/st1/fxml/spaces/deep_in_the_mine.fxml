@@ -11,7 +11,7 @@
       <Image url="@../../assets/deep_thorium.png" />
    </ImageView>
     <Button layoutX="1015.0" layoutY="222.0" mnemonicParsing="false" onAction="#gotoSurface" prefHeight="89.0" prefWidth="163.0" styleClass="custombutton" text="Udenfor" />
-   <HBox fx:id="npcContainer" layoutX="71.0" layoutY="60.0" prefHeight="248.0" prefWidth="832.0" />
+   <HBox fx:id="npcContainer" layoutY="206.0" prefHeight="390.0" prefWidth="787.0" />
    <VBox fx:id="triggerNPCVbox" layoutX="580.0" layoutY="475.0" onMouseClicked="#triggerNpc" prefHeight="109.0" prefWidth="70.0">
       <children>
       <ImageView fitHeight="109.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
