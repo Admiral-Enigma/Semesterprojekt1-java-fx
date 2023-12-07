@@ -42,7 +42,7 @@ public class ThoriumMan extends BaseNpc implements HasQuiz {
 
         Question question1 = new Question("Hvilket brændstof er mere bæredygtigt thorium eller uran? ", 0);
         question1
-                .addChoice("Thorium er mere bæredygtigt som brændstof, da det er stort forekommende i naturen og producerer mindre langvarigt radioaktivt affald i forhold til uran.")
+                .addChoice("Thorium er mere bæredygtigt som brændstof, da det hyppigt forekommer i naturen og producerer mindre langvarigt radioaktivt affald i forhold til uran.")
                 .addChoice("Uran er mere bæredygtigt som brændstof, selvom der ikke findes meget af det i naturen, da det ikke er radioaktivt. ");
 
         Question question2 = new Question("Hvad er den primære fordel ved thoriumreaktorer i forhold til sikkerhed i sammenligning med uranreaktorer? ", 1);

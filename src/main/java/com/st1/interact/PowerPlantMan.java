@@ -17,7 +17,7 @@ public class PowerPlantMan extends BaseNpc implements HasQuiz {
                 .addChoice("Små Modulære Reaktorer (Small Modular Reactor).")
                 .addChoice("Semi-automatisk Maskine Reaktor (Semi-Automatic Machine Reactor).");
 
-        Question question2 = new Question("Hvor meget energi kan en SMR producere, for at den er kvalificeret som en SMR?", 1, "Jeg er glad for, vi har dig som konsulent! Her er din beklønning!");
+        Question question2 = new Question("Hvor meget energi kan en SMR producere, for at den er kvalificeret som en SMR?", 1, "Jeg er glad for, vi har dig som konsulent! Her er din belønning!");
         question2
                 .addChoice("500 megawatt?")
                 .addChoice("300 megawatt?");

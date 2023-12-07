@@ -12,7 +12,7 @@ public class FukushimaKid extends BaseNpc implements HasQuiz {
     public FukushimaKid() {
         super("Fukushima Kid");
 
-        Question question1 = new Question("Hvad skete der d. 11. marts 2011? ", 1);
+        Question question1 = new Question("Hvilken naturkatastrofe ramte Fukushima d. 11. marts 2011? ", 1);
         question1
                 .addChoice("Tornado")
                 .addChoice("Tsunami");

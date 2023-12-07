@@ -2,7 +2,7 @@ package com.st1.interact;
 
 public class MineMan extends BaseNpc {
         public MineMan() {
-            super("Mine Abejder");
+            super("Mine Arbejder");
         }
 
         @Override

@@ -20,7 +20,7 @@ public class FukushimaMan extends BaseNpc{
                     "\nmen det er ikke alt, hvad der er til atomkraft. " +
                     "\nUdover at Japan blev ramt af en kraftig tsunami" +
                     "\nså ligger Japen på 4 tektoniske plader, der gør at det er konstant udsat for jordskælv," +
-                    "\nhvilket gør det besværligere at bygge atomkræftværker der.";
+                    "\nhvilket gør det mere besværligt at bygge atomkræftværker der.";
         }
 
 
