@@ -17,7 +17,7 @@ public class FukushimaKid extends BaseNpc implements HasQuiz {
                 .addChoice("Tornado")
                 .addChoice("Tsunami");
 
-        Question question2 = new Question("Hvad kunne man havde gjort for at undgå lignende ulykker for fremtidige kraftværker?", 0, "Her er en SMRTurbine.");
+        Question question2 = new Question("Hvad kunne man have gjort for at undgå lignende ulykker for fremtidige kraftværker?", 0, "Her er en SMRTurbine.");
         question2
                 .addChoice("Foretage flere sikkerhedstest og have regelmæssige tjek på konstruktionen og selve kraftværket.")
                 .addChoice("Færre reglementer, så arbejderne har mindre stress. ");

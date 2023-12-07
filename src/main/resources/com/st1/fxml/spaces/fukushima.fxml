@@ -18,7 +18,7 @@
     <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="490.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true" />
     <HBox fx:id="fukushimamancontainer" layoutX="28.0" layoutY="139.0" prefHeight="470.0" prefWidth="536.0" />
 
-    <HBox fx:id="npcContainer" layoutX="728.0" layoutY="257.0" prefHeight="199.0" prefWidth="359.0" />
+    <HBox fx:id="npcContainer" layoutX="661.0" layoutY="323.0" prefHeight="276.0" prefWidth="502.0" />
     <VBox fx:id="triggerNPCVbox" layoutX="863.0" layoutY="456.0" onMouseClicked="#triggerNpc" prefHeight="109.0" prefWidth="70.0">
       <children>
             <ImageView fitHeight="109.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
