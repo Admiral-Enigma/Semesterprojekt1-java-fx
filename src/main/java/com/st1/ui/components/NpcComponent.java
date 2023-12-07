@@ -140,7 +140,6 @@ public class NpcComponent {
                     this.render();
                 });
                 backButton.getStyleClass().add("custombutton");
-                //backButton.setMaxWidth(Double.MAX_VALUE);
                 backButton.setPrefHeight(controlButtonHeight);
                 HBox.setHgrow(backButton, javafx.scene.layout.Priority.ALWAYS);
 
@@ -154,7 +153,6 @@ public class NpcComponent {
                     this.render();
                 });
 
-                //nextButton.setMaxWidth(Double.MAX_VALUE);
                 nextButton.setPrefHeight(controlButtonHeight);
                 nextButton.getStyleClass().add("custombutton");
                 HBox.setHgrow(nextButton, javafx.scene.layout.Priority.ALWAYS);
@@ -170,7 +168,6 @@ public class NpcComponent {
             dismissButton.setOnMouseClicked(e -> {
                 messageContainer.getChildren().removeAll(message, buttonRow);
             });
-            //dismissButton.setMaxWidth(Double.MAX_VALUE);
             dismissButton.getStyleClass().add("custombutton");
             HBox.setHgrow(dismissButton, javafx.scene.layout.Priority.ALWAYS);
             dismissButton.setPrefHeight(controlButtonHeight);
