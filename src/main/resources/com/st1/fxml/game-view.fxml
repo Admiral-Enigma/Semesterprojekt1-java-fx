@@ -23,13 +23,13 @@
             </VBox>
         </center>
         <bottom>
-            <BorderPane>
+            <BorderPane styleClass="bottombar">
                 <left>
                     <HBox style="-fx-alignment: center" spacing="10" fx:id="inventoryHbox"/>
                 </left>
                 <right>
-                    <VBox style="">
-                        <TextArea fx:id="messagesTextArea" editable="false" focusTraversable="false" wrapText="true" maxHeight="90">
+                    <VBox style="-fx-padding: 10px">
+                        <TextArea styleClass="messagebox" fx:id="messagesTextArea" editable="false" focusTraversable="false" wrapText="true" maxHeight="90">
                         </TextArea>
                     </VBox>
                 </right>
